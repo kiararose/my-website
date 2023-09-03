@@ -1,0 +1,82 @@
+.welcome-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+
+    &__first, &__second, &__third{
+        color: #fff;
+        font-family: 'Roboto Mono';
+        overflow: hidden; 
+        border-right: .15em solid #fff; 
+        white-space: nowrap; 
+        width: 100%;
+        margin: 0 0 10px 0;
+        max-width: fit-content;
+        letter-spacing: .15em; 
+        font-size: 1.25rem;
+
+        @media (min-width: 768px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__first {
+        animation: 
+        typing 3.5s steps(30, end),
+        blink-caret .5s step-end;
+
+        &.hide-border {
+            border: none;
+        }
+    }
+
+    &__second {
+        animation: 
+        typing 3.5s steps(30, end),
+        blink-caret .5s step-end;
+        animation-play-state: paused;
+
+        &.run {
+            animation-play-state: running;
+        }
+
+        &.hide-border {
+            border: none;
+        }
+    }
+
+    &__third {
+        animation: 
+        typing 3.5s steps(30, end),
+        blink-caret .5s step-end infinite;
+        animation-play-state: paused;
+
+        &.run {
+            animation-play-state: running;
+        }
+    }
+
+    &__arrow {
+        width: 14px;
+        padding: 50px 0 0 0;
+        opacity: 0;
+        transition: all .5s ease;
+
+        &.show {
+            opacity: 1;
+        }
+    }
+}
+   
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #fff }
+}
