@@ -20,7 +20,7 @@ export default function WelcomeHeader() {
     return (
         <div className="welcome-header">
             <h1 className={`welcome-header__first ${isDone ? 'hide-border' : ''}`}>Hello! I'm Kiara ♡</h1>
-            <h1 className={`welcome-header__second ${isDone ? 'run' : ''} ${isDone2 ? 'hide-border' : ''}`}>Welcome to my website</h1>
+            <h1 className={`welcome-header__second ${isDone ? 'run' : ''} ${isDone2 ? 'hide-border' : ''}`}>Welcome to my website!</h1>
             <h1 className={`welcome-header__third ${isDone2 ? 'run' : ''}`}>Feel free to look around 👀</h1>
 			
         </div>

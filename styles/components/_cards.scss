@@ -1,46 +1,54 @@
 .about-container {
-    padding-top: 90px;
+    padding: 60px 0 0 0;
 
     .card-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 5rem;
+        margin: 0 0 5rem 0;
     
         img {
-            width: auto;
-        }
-
-        @media (min-width: 768px) {
-            flex-direction: row;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
         }
     
         p {
             color: #FFF;
-            font-family: 'Roboto Mono';
-            font-size: 1.2rem;
+            font-family: 'Space Mono';
+            font-size: 1rem;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
             max-width: 800px;
             padding: 0 24px;
+            text-align: center;
+            margin: 24px 0 0 0;
             
             @media (min-width: 1024px) {
-                font-size: 1.5rem;
+                font-size: 1.1rem;
             }
         }
     }
 }
 
 .websites-container {
-    padding-top: 90px;
+    padding: 60px 0 0 0;
+    margin: 0 0 5rem 0;
     
-
     .cards-container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        flex-wrap: wrap;
+        left: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        max-width: 100vw;
+        position: relative;
+        right: 50%;
+        width: 100vw;
     
         @media (min-width: 768px) {
             flex-direction: row;
@@ -52,15 +60,21 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 5rem;
+        // margin-bottom: 5rem;
         width: 100%;
+        height: fit-content;
 
         @media (min-width: 768px) {
-            width: calc(50% - 10px);
+            width: 50%;
+        }
+
+        @media (min-width: 1024px) {
+            width: 33.33%;
         }
 
         img {
             width: 100%;
+            object-fit: cover;
         }
     
         p {
@@ -71,6 +85,7 @@
             font-weight: 400;
             line-height: normal;
             margin: 10px 0;
+            display: none;
         }
     }
 }

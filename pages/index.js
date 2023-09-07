@@ -7,6 +7,7 @@ import WelcomeHeader from "../components/welcome_header"
 import SectionTitle from "../components/section_title"
 import CardWithDescription from "../components/card_with_description"
 import ContactList from "../components/contact_list"
+import Footer from "../components/footer"
 
 export default function Home() {
 
@@ -62,28 +63,56 @@ export default function Home() {
 					<SectionTitle title="<About Me />"/>
 					<CardWithDescription 
 						class_name="card-container"
-						image="/images/about_image_placeholder.png"
+						image="/images/bondee-avatar.jpg"
 						image_alt=""
 						description="As a Front-End Developer with a keyboard as my paintbrush and code as my canvas, I transform imagination into reality, crafting digital experiences that leave users spellbound 🔮"
 					/>
 				</div>
 
 				<div className="websites-container" ref={websitesRef}>
-					<SectionTitle title="<Projects (personal) />"/>
+					<SectionTitle title="<Works />"/>
 
 					<div className="cards-container">
 						<CardWithDescription 
 							class_name="card-container"
-							image="/images/websites_image_placeholder.png"
+							image="/images/fm-fylo-dark-theme-landing-page.png"
 							image_alt=""
 							description="Blog Website"
 						/>
 
 						<CardWithDescription 
 							class_name="card-container"
-							image="/images/websites_image_placeholder.png"
+							image="/images/fm-faq-accordion-card.png"
 							image_alt=""
 							description="eCommerce Website"
+						/>
+
+						<CardWithDescription 
+							class_name="card-container"
+							image="/images/fm-single-price-grid-component.png"
+							image_alt=""
+							description="eCommerce Website"
+						/>
+
+						<CardWithDescription 
+							class_name="card-container"
+							image="/images/fm-article-preview-component.png"
+							image_alt=""
+							description="Blog Website"
+						/>
+
+						<CardWithDescription 
+							class_name="card-container"
+							image="/images/fm-signup-form.png"
+							image_alt=""
+							description="eCommerce Website"
+						/>	
+
+						<CardWithDescription 
+							class_name="card-container"
+							image="/images/fm-fylo-dark-theme-landing-page.png"
+							image_alt=""
+							description="Blog Website"
 						/>
 					</div>
 				</div>
@@ -97,6 +126,8 @@ export default function Home() {
 						linked_in="🌐 linked.com"
 					/>
 				</div>
+
+				<Footer description="design & code by Kiara 🌷" />
 			</div>
 		</div>
 	)

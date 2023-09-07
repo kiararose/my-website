@@ -1,21 +1,24 @@
 .contact-container {
-    padding-top: 90px;
+    padding: 60px 0 0 0;
 
     .contact-list {
         li {
-            margin-bottom: 18px;
+            margin: 0 0 5px 0;
+            text-align: center;
 
             a, span {
                 color: #FFF;
-                font-family: 'Roboto Mono';
-                font-size: 18px;
+                font-family: 'Space Mono';
+                font-size: 1rem;
                 font-style: normal;
-                font-weight: 700;
+                font-weight: 400;
                 line-height: normal;
             }
 
             a {
-
+                &:hover {
+                    color: #FFF;
+                }
             }
 
             span {

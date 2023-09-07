@@ -24,10 +24,13 @@ export default function NavMenu(props) {
                                 <a className="nav-link" href="#!" onClick={about_scroll} data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>About Me</a>
                             </li>
                             <li className="nav-item header-icon">
+                                <a href="#!">
+                                    🌷
+                                </a>
                                 <img src="/images/" alt="" />
                              </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#!" onClick={websites_scroll}data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>Projects</a>
+                                <a className="nav-link" href="#!" onClick={websites_scroll}data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>Works</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#!" onClick={contact_scroll}data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>Contact</a>
