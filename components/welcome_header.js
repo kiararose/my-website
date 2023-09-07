@@ -22,7 +22,7 @@ export default function WelcomeHeader() {
             <h1 className={`welcome-header__first ${isDone ? 'hide-border' : ''}`}>Hello! I'm Kiara ♡</h1>
             <h1 className={`welcome-header__second ${isDone ? 'run' : ''} ${isDone2 ? 'hide-border' : ''}`}>Welcome to my website</h1>
             <h1 className={`welcome-header__third ${isDone2 ? 'run' : ''}`}>Feel free to look around 👀</h1>
-			<img className={`welcome-header__arrow ${isDone3 ? 'show' : ''}`} src="/images/arrow.png" alt=""/>
+			
         </div>
     )
 }

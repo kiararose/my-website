@@ -40,6 +40,15 @@ a {
     text-decoration: none;
 }
 
+::selection {
+    background-color: #FF33E9;
+    color: #fff;
+}
+
+.header-main-container,
 .main-container {
-    // padding-top: 300px;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
 }

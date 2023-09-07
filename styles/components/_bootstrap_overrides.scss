@@ -2,7 +2,7 @@
     .navbar {
 
         @media (min-width: 1024px) {
-            height: 150px;
+            height: 90px;
             padding-top: 0;
         }
 
@@ -53,26 +53,33 @@
                         font-size: 24px;
                         position: relative;
 
-                        &:hover, &.active {
+                        &:hover {
                             &::before {
-                                width: 30%;
+                                // width: 30%;
                                 opacity: 1;
+                                animation: blink-caret-nav .5s step-end infinite;
                             }
                         }
 
                         &::before {
                             position: absolute;
                             content: "";
-                            width: 0;
-                            height: 2px;
+                            width: 30%;
+                            height: 4px;
                             background: #fff;
                             bottom: 0;
                             left: 9;
-                            transition: all .5s ease;
+                            opacity: 0;
+                            transition: all .9s ease;
                         }
                     }
                 }
             }
         }
     }
+}
+
+@keyframes blink-caret-nav {
+    from, to { background: transparent }
+    50% { background: #fff }
 }
