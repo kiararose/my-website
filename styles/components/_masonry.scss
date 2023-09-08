@@ -4,19 +4,20 @@
     padding: 0;
     justify-content: center;
     width: 100% !important;
-    margin-left: 20px;
+    margin: 0 auto;
+    // margin-left: 20px;
 
-    .masonry-photo {
-        margin: 0;
-        width: calc(50% - 8px);
-        padding: 4px;
+    // .masonry-photo {
+    //     margin: 0;
+    //     width: calc(50% - 8px);
+    //     padding: 4px;
 
-        // @media (max-width:1920px) {
-        //     width: calc(33.33% - 8px);
-        // }
+    //     // @media (max-width:1920px) {
+    //     //     width: calc(33.33% - 8px);
+    //     // }
     
-        // @media (max-width:768px) {
-        //     width: calc(50% - 8px);
-        // }
-    }
+    //     // @media (max-width:768px) {
+    //     //     width: calc(50% - 8px);
+    //     // }
+    // }
 }

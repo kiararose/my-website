@@ -25,7 +25,7 @@ export default function MasonryGallery() {
     }, [])
 
     return (
-        <div className="masonry-photos">
+        <div className="masonry-photos row row-cols-2">
            
             {process.env.works.map((work) => {
                     return (

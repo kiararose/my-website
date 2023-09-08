@@ -7,13 +7,13 @@ const nextConfig = {
 			{
 				id: 1,
 				description: 'Fylo Dark Theme Landing Page',
-				image: '/images/fm-fylo-dark-theme-landing-page.png',
-				image_mobile: '/images/fm-fylo-dark-theme-landing-page-mobile.png',
+				image: '/images/fm-fylo-dark-theme-landing-page-git-master-kiararose-vercel-app.png',
+				image_mobile: '/images/fm-fylo-dark-theme-landing-page-git-master-kiararose-vercel-app-mobile.png',
 				image_alt: 'Fylo Dark Theme Landing Page',
 				tags: 'html, css, javascript',
 				year: '2021',
 				link: 'https://fm-fylo-dark-theme-landing-page-en2oc02vn-kiararose.vercel.app/',
-				col_class_name: 'card-hover masonry-photo'
+				col_class_name: 'card-hover col masonry-photo'
 			},
 			{
 				id: 2,
@@ -24,7 +24,7 @@ const nextConfig = {
 				tags: 'html, css, javascript',
 				year: '2021',
 				link: 'https://fm-fylo-dark-theme-landing-page-en2oc02vn-kiararose.vercel.app/',
-				col_class_name: 'card-hover masonry-photo'
+				col_class_name: 'card-hover col masonry-photo'
 			},
 			{
 				id: 3,
@@ -35,7 +35,7 @@ const nextConfig = {
 				tags: 'html, css, javascript',
 				year: '2021',
 				link: 'https://fm-fylo-dark-theme-landing-page-en2oc02vn-kiararose.vercel.app/',
-				col_class_name: 'card-hover masonry-photo'
+				col_class_name: 'card-hover col masonry-photo'
 			},
 			{
 				id: 4,
@@ -46,7 +46,7 @@ const nextConfig = {
 				tags: 'html, css, javascript',
 				year: '2021',
 				link: 'https://fm-fylo-dark-theme-landing-page-en2oc02vn-kiararose.vercel.app/',
-				col_class_name: 'card-hover masonry-photo'
+				col_class_name: 'card-hover col masonry-photo'
 			},
 			{
 				id: 5,
@@ -57,18 +57,18 @@ const nextConfig = {
 				tags: 'html, css, javascript',
 				year: '2021',
 				link: 'https://fm-fylo-dark-theme-landing-page-en2oc02vn-kiararose.vercel.app/',
-				col_class_name: 'card-hover masonry-photo'
+				col_class_name: 'card-hover col masonry-photo'
 			},
 			{
 				id: 6,
 				description: 'Fylo Dark Theme Landing Page',
-				image: 'images/fm-fylo-dark-theme-landing-page.png',
-				image_mobile: '/images/fm-fylo-dark-theme-landing-page-mobile.png',
+				image: '/images/fm-fylo-dark-theme-landing-page-git-master-kiararose-vercel-app.png',
+				image_mobile: '/images/fm-fylo-dark-theme-landing-page-git-master-kiararose-vercel-app-mobile.png',
 				image_alt: 'Fylo Dark Theme Landing Page',
 				tags: 'html, css, javascript',
 				year: '2021',
 				link: 'https://fm-fylo-dark-theme-landing-page-en2oc02vn-kiararose.vercel.app/',
-				col_class_name: 'card-hover masonry-photo'
+				col_class_name: 'card-hover col masonry-photo'
 			}
 		]
   	},
