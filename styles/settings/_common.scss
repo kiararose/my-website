@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    // font-family: $primary-font,sans-serif;
+    font-family: 'Roboto Mono';
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     cursor: crosshair;
@@ -47,36 +47,22 @@ a {
     color: #fff;
 }
 
-.header-main-container {
-    max-width: 1680px;
-    width: 100%;
-    margin: 0 auto;
-    
-}
-
-.main-container {
-    max-width: 1680px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 10rem 0 0 0;
-}
-
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
-  }
+}
   
-  /* Track */
-  ::-webkit-scrollbar-track {
+/* Track */
+::-webkit-scrollbar-track {
     background: #000; 
-  }
+}
    
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: #FF33E9; 
-  }
+}
   
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: #ff33eb63; 
-  }
+}

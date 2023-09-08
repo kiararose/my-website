@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useInViewport } from 'react-in-viewport';
 
+
 import Matrix from "../components/matrix_raining_code"
 import NavMenu from "../components/nav_menu"
 import WelcomeHeader from "../components/welcome_header"
@@ -10,6 +11,7 @@ import CardHover from "../components/card_hover"
 import ContactList from "../components/contact_list"
 import Footer from "../components/footer"
 import IntroductionHeader from "../components/introduction_header";
+import MasonryGallery from "../components/masonry";
 
 export default function Home() {
 
@@ -65,8 +67,10 @@ export default function Home() {
 				<div className="works-container">
 					<SectionTitle title="Works_"/>
 
-					<div className="row cards-hover-container">
-						{
+					<div className="cards-hover-container">
+						<MasonryGallery />
+					{/* <MasonryGallery>
+					{
 							process.env.works.map((work) => {
 								return (
 									<CardHover 
@@ -83,6 +87,8 @@ export default function Home() {
 								)
 							})
 						}
+					</MasonryGallery> */}
+						
 						{/* <CardHover 
 							col_class_name="col-lg-6 card-hover"
 							image="/images/fm-fylo-dark-theme-landing-page.png"

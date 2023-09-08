@@ -1,14 +1,14 @@
 import RotatingLink from "./rotating_link"
 
 export default function CardHover(props) {
-	const image = props.image
-    const image_mobile = props.image_mobile
-    const description = props.description
-    const image_alt = props.image_alt
-    const col_class_name = props.col_class_name
-    const tags = props.tags
-    const year = props.year
-    const link = props.link
+	const image = props.image || ''
+    const image_mobile = props.image_mobile || ''
+    const description = props.description || ''
+    const image_alt = props.image_alt || ''
+    const col_class_name = props.col_class_name || ''
+    const tags = props.tags || ''
+    const year = props.year || ''
+    const link = props.link || '!#'
 
     return (
         <div className={`card-hover ${col_class_name}`}>
