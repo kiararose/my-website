@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef } from "react";
 import { useInViewport } from 'react-in-viewport';
-
 import Matrix from "../components/matrix_raining_code"
 import NavMenu from "../components/nav_menu"
 import WelcomeHeader from "../components/welcome_header"
@@ -75,7 +74,7 @@ export default function Home() {
 
 					<div className="row cards-hover-container">
 						<CardHover 
-							col_class_name="col-6 col-md-6 col-lg-6 col-xl-4 p-0 card-hover"
+							col_class_name="col-lg-6 p-0 card-hover"
 							image="/images/fm-fylo-dark-theme-landing-page.png"
 							image_mobile="/images/fm-fylo-dark-theme-landing-page-mobile.png"
 							image_alt="Fylo Dark Theme Landing Page"
@@ -84,7 +83,7 @@ export default function Home() {
 						/>
 
 						<CardHover 
-							col_class_name="col-6 col-md-6 col-lg-6 col-xl-4 p-0"
+							col_class_name="col-lg-6 p-0 card-hover"
 							image="/images/fm-faq-accordion-card.png"
 							image_mobile="/images/fm-faq-accordion-card-mobile.png"
 							image_alt="Faq Accordion Card"
@@ -93,7 +92,7 @@ export default function Home() {
 						/>
 
 						<CardHover 
-							col_class_name="col-6 col-md-6 col-lg-6 col-xl-4 p-0"
+							col_class_name="col-lg-6 p-0 card-hover"
 							image="/images/fm-single-price-grid-component.png"
 							image_mobile="/images/fm-single-price-grid-component-mobile.png"
 							image_alt="Single Price Grid Component"
@@ -102,16 +101,7 @@ export default function Home() {
 						/>
 
 						<CardHover 
-							col_class_name="col-6 col-md-6 col-lg-6 col-xl-4 p-0"
-							image="/images/fm-article-preview-component.png"
-							image_mobile="/images/fm-article-preview-component-mobile.png"
-							image_alt="Article Preview Component"
-							description="Article Preview Component"
-							button_name="View"
-						/>
-
-						<CardHover 
-							col_class_name="col-6 col-md-6 col-lg-6 col-xl-4 p-0"
+							col_class_name="col-lg-6 p-0 card-hover"
 							image="/images/fm-signup-form.png"
 							image_mobile="/images/fm-signup-form-mobile.png"
 							image_alt="Signup Form"
@@ -120,11 +110,20 @@ export default function Home() {
 						/>	
 
 						<CardHover 
-							col_class_name="col-6 col-md-6 col-lg-6 col-xl-4 p-0 card-hover"
+							col_class_name="col-lg-6 p-0 card-hover"
 							image="/images/fm-fylo-dark-theme-landing-page.png"
 							image_mobile="/images/fm-fylo-dark-theme-landing-page-mobile.png"
 							image_alt="Fylo Dark Theme Landing Page"
 							description="Fylo Dark Theme Landing Page"
+							button_name="View"
+						/>
+
+						<CardHover 
+							col_class_name="col-lg-6 p-0 card-hover"
+							image="/images/fm-article-preview-component.png"
+							image_mobile="/images/fm-article-preview-component-mobile.png"
+							image_alt="Article Preview Component"
+							description="Article Preview Component"
 							button_name="View"
 						/>
 					</div>
