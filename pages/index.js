@@ -5,7 +5,8 @@ import Matrix from "../components/matrix_raining_code"
 import NavMenu from "../components/nav_menu"
 import WelcomeHeader from "../components/welcome_header"
 import SectionTitle from "../components/section_title"
-import CardWithDescription from "../components/card_with_description"
+import CardWithImageDescription from "../components/card_with_image_description"
+import CardHover from "../components/card_hover"
 import ContactList from "../components/contact_list"
 import Footer from "../components/footer"
 
@@ -61,7 +62,7 @@ export default function Home() {
 				
 				<div className="about-container" ref={aboutRef}>
 					<SectionTitle title="<About Me />"/>
-					<CardWithDescription 
+					<CardWithImageDescription 
 						class_name="card-container"
 						image="/images/bondee-avatar.jpg"
 						image_alt=""
@@ -72,47 +73,59 @@ export default function Home() {
 				<div className="websites-container" ref={websitesRef}>
 					<SectionTitle title="<Works />"/>
 
-					<div className="cards-container">
-						<CardWithDescription 
-							class_name="card-container"
+					<div className="row cards-hover-container">
+						<CardHover 
+							col_class_name="col-6 col-md-6 col-lg-6 col-xl-4 p-0 card-hover"
 							image="/images/fm-fylo-dark-theme-landing-page.png"
-							image_alt=""
-							description="Blog Website"
+							image_mobile="/images/fm-fylo-dark-theme-landing-page-mobile.png"
+							image_alt="Fylo Dark Theme Landing Page"
+							description="Fylo Dark Theme Landing Page"
+							button_name="View"
 						/>
 
-						<CardWithDescription 
-							class_name="card-container"
+						<CardHover 
+							col_class_name="col-6 col-md-6 col-lg-6 col-xl-4 p-0"
 							image="/images/fm-faq-accordion-card.png"
-							image_alt=""
-							description="eCommerce Website"
+							image_mobile="/images/fm-faq-accordion-card-mobile.png"
+							image_alt="Faq Accordion Card"
+							description="Faq Accordion Card"
+							button_name="View"
 						/>
 
-						<CardWithDescription 
-							class_name="card-container"
+						<CardHover 
+							col_class_name="col-6 col-md-6 col-lg-6 col-xl-4 p-0"
 							image="/images/fm-single-price-grid-component.png"
-							image_alt=""
-							description="eCommerce Website"
+							image_mobile="/images/fm-single-price-grid-component-mobile.png"
+							image_alt="Single Price Grid Component"
+							description="Single Price Grid Component"
+							button_name="View"
 						/>
 
-						<CardWithDescription 
-							class_name="card-container"
+						<CardHover 
+							col_class_name="col-6 col-md-6 col-lg-6 col-xl-4 p-0"
 							image="/images/fm-article-preview-component.png"
-							image_alt=""
-							description="Blog Website"
+							image_mobile="/images/fm-article-preview-component-mobile.png"
+							image_alt="Article Preview Component"
+							description="Article Preview Component"
+							button_name="View"
 						/>
 
-						<CardWithDescription 
-							class_name="card-container"
+						<CardHover 
+							col_class_name="col-6 col-md-6 col-lg-6 col-xl-4 p-0"
 							image="/images/fm-signup-form.png"
-							image_alt=""
-							description="eCommerce Website"
+							image_mobile="/images/fm-signup-form-mobile.png"
+							image_alt="Signup Form"
+							description="Signup Form"
+							button_name="View"
 						/>	
 
-						<CardWithDescription 
-							class_name="card-container"
+						<CardHover 
+							col_class_name="col-6 col-md-6 col-lg-6 col-xl-4 p-0 card-hover"
 							image="/images/fm-fylo-dark-theme-landing-page.png"
-							image_alt=""
-							description="Blog Website"
+							image_mobile="/images/fm-fylo-dark-theme-landing-page-mobile.png"
+							image_alt="Fylo Dark Theme Landing Page"
+							description="Fylo Dark Theme Landing Page"
+							button_name="View"
 						/>
 					</div>
 				</div>

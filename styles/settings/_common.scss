@@ -5,6 +5,7 @@ html, body {
     // font-family: $primary-font,sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    cursor: crosshair;
 }
 
 body {
@@ -48,8 +49,28 @@ a {
 
 .header-main-container,
 .main-container {
-    max-width: 1440px;
+    max-width: 1920px;
     width: 100%;
     margin: 0 auto;
     padding: 0 24px;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #FF33E9; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff33eb63; 
+  }
