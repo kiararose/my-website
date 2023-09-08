@@ -1,5 +1,6 @@
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useInViewport } from 'react-in-viewport';
+
 import Matrix from "../components/matrix_raining_code"
 import NavMenu from "../components/nav_menu"
 import WelcomeHeader from "../components/welcome_header"
@@ -8,6 +9,7 @@ import CardWithImageDescription from "../components/card_with_image_description"
 import CardHover from "../components/card_hover"
 import ContactList from "../components/contact_list"
 import Footer from "../components/footer"
+import IntroductionHeader from "../components/introduction_header";
 
 export default function Home() {
 
@@ -40,6 +42,8 @@ export default function Home() {
 		clearTimeout(welcomeTimer);
 		};
 	}, []);
+
+	console.log(process.env.works)
   
 	return (
 		<div className="main-container">
@@ -50,16 +54,63 @@ export default function Home() {
 				contact_scroll={scrollToContact}
 			/>
 
-			<div className="">
-				{isWelcome &&
+			<div className="content-container">
+				{/* {isWelcome &&
 					<Matrix />
-				}
-				
-				<div ref={homeRef}>
-					<WelcomeHeader />
+				} */}
+				<IntroductionHeader 
+					description="Kiara Marcelo — A front-end developer from the Philippines. With a keyboard as my paintbrush and code as my canvas, I transform imagination into reality, crafting digital experiences that leave users spellbound 🔮"
+				/>
+
+				<div className="works-container">
+					<SectionTitle title="Works_"/>
+
+					<div className="row cards-hover-container">
+						{
+							process.env.works.map((work) => {
+								return (
+									<CardHover 
+										key={work.id}
+										description={work.description}
+										image={work.image}
+										image_mobile={work.image_mobile}
+										image_alt={work.image_alt}
+										tags={work.tags}
+										year={work.year}
+										link={work.link}
+										col_class_name={work.col_class_name}
+									/>
+								)
+							})
+						}
+						{/* <CardHover 
+							col_class_name="col-lg-6 card-hover"
+							image="/images/fm-fylo-dark-theme-landing-page.png"
+							image_mobile="/images/fm-fylo-dark-theme-landing-page-mobile.png"
+							image_alt="Fylo Dark Theme Landing Page"
+							description="Fylo Dark Theme Landing Page"
+							tags="html, css, javascript"
+							year="2021"
+							link="https://fm-fylo-dark-theme-landing-page-en2oc02vn-kiararose.vercel.app/"
+						/>
+
+						<CardHover 
+							col_class_name="col-lg-6 card-hover"
+							image="/images/fm-faq-accordion-card.png"
+							image_mobile="/images/fm-faq-accordion-card-mobile.png"
+							image_alt="Faq Accordion Card"
+							description="Faq Accordion Card"
+							tags="html, css, javascript"
+							year="2021"
+						/> */}
+					</div>
 				</div>
 				
-				<div className="about-container" ref={aboutRef}>
+				{/* <div ref={homeRef}>
+					<WelcomeHeader />
+				</div> */}
+				
+				{/* <div className="about-container" ref={aboutRef}>
 					<SectionTitle title="About Me_"/>
 					<CardWithImageDescription 
 						class_name="card-container"
@@ -137,7 +188,7 @@ export default function Home() {
 						email="📧 kiararxsemarcelo@gmail.com"
 						linked_in="🌐 linked.com"
 					/>
-				</div>
+				</div> */}
 
 				<Footer description="design & code by Kiara 🌷" />
 			</div>

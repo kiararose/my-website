@@ -47,12 +47,18 @@ a {
     color: #fff;
 }
 
-.header-main-container,
-.main-container {
-    max-width: 1920px;
+.header-main-container {
+    max-width: 1680px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 24px;
+    
+}
+
+.main-container {
+    max-width: 1680px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10rem 0 0 0;
 }
 
 /* width */

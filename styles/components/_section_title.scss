@@ -1,18 +1,13 @@
 .section-title {
+    margin: 0 0 5rem 0;
+    
     h1 {
-        color: #FFF;
+        color: #8D8D8D;
         font-family: 'Roboto Mono';
-        font-size: 2rem;
+        font-size: 22px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        letter-spacing: 2.4px;
         text-transform: uppercase;
-        margin-bottom: 4rem;
-        text-align: center;
-
-        @media (min-width: 1024px) {
-            font-size: 2.5rem;
-        }
     }
 }

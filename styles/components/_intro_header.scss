@@ -1,0 +1,21 @@
+.intro-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+
+    &__description {
+        max-width: 70%;
+
+        p {
+            color: #FFF;
+            text-align: justify;
+            font-family: 'Josefin Sans';
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            letter-spacing: 0.4px;
+        }
+    }
+}
