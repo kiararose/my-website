@@ -15,6 +15,7 @@ export default function CardHover(props) {
             <div className="card-hover-info">
                 <p className="card-hover-info__description">{description}</p>
                 <button className="card-hover-info__button">{button_name}</button>
+                <span className="card-hover-info__tags">HTML, CSS, Javascript</span>
             </div>
         </div>
     )

@@ -60,7 +60,7 @@ export default function Home() {
 				</div>
 				
 				<div className="about-container" ref={aboutRef}>
-					<SectionTitle title="<About Me />"/>
+					<SectionTitle title="About Me_"/>
 					<CardWithImageDescription 
 						class_name="card-container"
 						image="/images/bondee-avatar.jpg"
@@ -70,11 +70,11 @@ export default function Home() {
 				</div>
 
 				<div className="websites-container" ref={websitesRef}>
-					<SectionTitle title="<Works />"/>
+					<SectionTitle title="Works_"/>
 
 					<div className="row cards-hover-container">
 						<CardHover 
-							col_class_name="col-lg-6 p-0 card-hover"
+							col_class_name="col-lg-6  card-hover"
 							image="/images/fm-fylo-dark-theme-landing-page.png"
 							image_mobile="/images/fm-fylo-dark-theme-landing-page-mobile.png"
 							image_alt="Fylo Dark Theme Landing Page"
@@ -83,7 +83,7 @@ export default function Home() {
 						/>
 
 						<CardHover 
-							col_class_name="col-lg-6 p-0 card-hover"
+							col_class_name="col-lg-6  card-hover"
 							image="/images/fm-faq-accordion-card.png"
 							image_mobile="/images/fm-faq-accordion-card-mobile.png"
 							image_alt="Faq Accordion Card"
@@ -92,7 +92,7 @@ export default function Home() {
 						/>
 
 						<CardHover 
-							col_class_name="col-lg-6 p-0 card-hover"
+							col_class_name="col-lg-6  card-hover"
 							image="/images/fm-single-price-grid-component.png"
 							image_mobile="/images/fm-single-price-grid-component-mobile.png"
 							image_alt="Single Price Grid Component"
@@ -101,7 +101,7 @@ export default function Home() {
 						/>
 
 						<CardHover 
-							col_class_name="col-lg-6 p-0 card-hover"
+							col_class_name="col-lg-6  card-hover"
 							image="/images/fm-signup-form.png"
 							image_mobile="/images/fm-signup-form-mobile.png"
 							image_alt="Signup Form"
@@ -110,7 +110,7 @@ export default function Home() {
 						/>	
 
 						<CardHover 
-							col_class_name="col-lg-6 p-0 card-hover"
+							col_class_name="col-lg-6  card-hover"
 							image="/images/fm-fylo-dark-theme-landing-page.png"
 							image_mobile="/images/fm-fylo-dark-theme-landing-page-mobile.png"
 							image_alt="Fylo Dark Theme Landing Page"
@@ -119,7 +119,7 @@ export default function Home() {
 						/>
 
 						<CardHover 
-							col_class_name="col-lg-6 p-0 card-hover"
+							col_class_name="col-lg-6  card-hover"
 							image="/images/fm-article-preview-component.png"
 							image_mobile="/images/fm-article-preview-component-mobile.png"
 							image_alt="Article Preview Component"
@@ -130,7 +130,7 @@ export default function Home() {
 				</div>
 
 				<div className="contact-container" ref={contactRef}>
-					<SectionTitle title="<Contact />"/>
+					<SectionTitle title="Contact_"/>
 
 					<ContactList
 						mobile="📞 09275066600"
