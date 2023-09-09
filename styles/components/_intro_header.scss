@@ -3,19 +3,27 @@
     align-items: center;
     justify-content: flex-end;
     flex-direction: row;
+    padding: 0 4px;
 
     &__description {
         max-width: 70%;
 
         p {
             color: #FFF;
-            text-align: justify;
+            text-align: right;
             font-family: 'Josefin Sans';
-            font-size: 40px;
+            font-size: 24px;
             font-style: normal;
             font-weight: 300;
             line-height: normal;
-            letter-spacing: 0.4px;
+
+            @media (min-width: 768px) {
+                font-size: 28px;
+            }
+
+            @media (min-width: 1024px) {
+                font-size: 40px;
+            }
         }
     }
 }

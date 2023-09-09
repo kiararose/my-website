@@ -2,8 +2,8 @@ import useMediaQuery from "../components/use_media_query"
 
 export default function NavMenu(props) {
     const home_scroll = props.home_scroll
-    const about_scroll = props.about_scroll
-    const websites_scroll = props.websites_scroll
+    const works_scroll = props.works_scroll
+    const skills_scroll = props.skills_scroll
     const contact_scroll = props.contact_scroll
     const is_mobile = useMediaQuery(768)
     
@@ -15,21 +15,19 @@ export default function NavMenu(props) {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <a className="navbar-brand" href="#!">🌷K_</a>
+                        <a className="navbar-brand" href="#!" onCLick={home_scroll}>🌷K_</a>
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
                             <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="#!" onClick={home_scroll} data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>Works</a>
+                                <a className="nav-link" href="#!" onClick={skills_scroll} data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>Skills</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#!" onClick={about_scroll} data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>Skills</a>
+                                <a className="nav-link" aria-current="page" href="#!" onClick={works_scroll} data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>Works</a>
                             </li>
-                            
                             <li className="nav-item">
-                                <a className="nav-link" href="#!" onClick={websites_scroll}data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>Contact</a>
+                                <a className="nav-link" href="#!" onClick={contact_scroll} data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>Contact</a>
                             </li>
-
                             <li className="nav-item">
-                                <a className="nav-link" href="#!" onClick={websites_scroll}data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>☂️</a>
+                                <a className="nav-link" href="#!" data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>☂️</a>
                             </li>
                         </ul>
                     </div>

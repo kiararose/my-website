@@ -1,36 +1,32 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useInViewport } from 'react-in-viewport';
 
-
 import Matrix from "../components/matrix_raining_code"
 import NavMenu from "../components/nav_menu"
-import WelcomeHeader from "../components/welcome_header"
 import SectionTitle from "../components/section_title"
-import CardWithImageDescription from "../components/card_with_image_description"
-import CardHover from "../components/card_hover"
-import ContactList from "../components/contact_list"
 import Footer from "../components/footer"
 import IntroductionHeader from "../components/introduction_header";
 import MasonryGallery from "../components/masonry";
+import List from "../components/list";
 
 export default function Home() {
 
     const [isWelcome, setIsWelcome] = useState(false)
 	const homeRef = useRef(null)
-	const aboutRef = useRef(null)
-	const websitesRef = useRef(null)
+	const worksRef = useRef(null)
+	const skillsRef = useRef(null)
 	const contactRef = useRef(null)
 
 	const scrollToHome = () => {
 		homeRef.current.scrollIntoView()
 	}
 
-    const scrollToAbout = () => {
-		aboutRef.current.scrollIntoView()
+	const scrollToWorks = () => {
+		worksRef.current.scrollIntoView()
 	}
 
-	const scrollToWebsites = () => {
-		websitesRef.current.scrollIntoView()
+	const scrollToSkills = () => {
+		skillsRef.current.scrollIntoView()
 	}
 
 	const scrollToContact = () => {
@@ -51,8 +47,8 @@ export default function Home() {
 		<div className="main-container">
 			<NavMenu 
 				home_scroll={scrollToHome}
-				about_scroll={scrollToAbout}
-				websites_scroll={scrollToWebsites}
+				works_scroll={scrollToWorks}
+				skills_scroll={scrollToSkills}
 				contact_scroll={scrollToContact}
 			/>
 
@@ -60,56 +56,26 @@ export default function Home() {
 				{/* {isWelcome &&
 					<Matrix />
 				} */}
+
 				<IntroductionHeader 
 					description="Kiara Marcelo — A front-end developer from the Philippines. With a keyboard as my paintbrush and code as my canvas, I transform imagination into reality, crafting digital experiences that leave users spellbound 🔮"
 				/>
 
-				<div className="works-container">
-					<SectionTitle title="Works_"/>
+				<div className="skills-container" ref={skillsRef}>
+					<SectionTitle title="Skills +"/>
+					<List list={process.env.skills}/>
+				</div>
 
+				<div className="works-container" ref={worksRef}>
+					<SectionTitle title="Works <>"/>
 					<div className="cards-hover-container">
 						<MasonryGallery />
-					{/* <MasonryGallery>
-					{
-							process.env.works.map((work) => {
-								return (
-									<CardHover 
-										key={work.id}
-										description={work.description}
-										image={work.image}
-										image_mobile={work.image_mobile}
-										image_alt={work.image_alt}
-										tags={work.tags}
-										year={work.year}
-										link={work.link}
-										col_class_name={work.col_class_name}
-									/>
-								)
-							})
-						}
-					</MasonryGallery> */}
-						
-						{/* <CardHover 
-							col_class_name="col-lg-6 card-hover"
-							image="/images/fm-fylo-dark-theme-landing-page.png"
-							image_mobile="/images/fm-fylo-dark-theme-landing-page-mobile.png"
-							image_alt="Fylo Dark Theme Landing Page"
-							description="Fylo Dark Theme Landing Page"
-							tags="html, css, javascript"
-							year="2021"
-							link="https://fm-fylo-dark-theme-landing-page-en2oc02vn-kiararose.vercel.app/"
-						/>
-
-						<CardHover 
-							col_class_name="col-lg-6 card-hover"
-							image="/images/fm-faq-accordion-card.png"
-							image_mobile="/images/fm-faq-accordion-card-mobile.png"
-							image_alt="Faq Accordion Card"
-							description="Faq Accordion Card"
-							tags="html, css, javascript"
-							year="2021"
-						/> */}
 					</div>
+				</div>
+
+				<div className="contact-container" ref={contactRef}>
+					<SectionTitle title="Contact @"/>
+					<List list={process.env.contact}/>
 				</div>
 				
 				{/* <div ref={homeRef}>

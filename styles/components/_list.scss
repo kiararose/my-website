@@ -1,0 +1,98 @@
+.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.skills-container {
+    padding: 60px 0 0 0;
+    margin: 0 0 5rem 0;
+
+    .section-title {
+        margin: 0;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: flex-start;
+        margin: 5rem 0 0 0;
+
+        &__item {
+            color: #FFF;
+            font-family: 'Roboto Mono';
+            font-size: 44px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            letter-spacing: 1.44px;
+            text-transform: lowercase;
+
+            &::after {
+                content: '_';
+                color: #7C7C7C;
+                width: fit-content;
+            }
+        }
+    
+        &__separator {
+            color: #7C7C7C;
+            font-family: 'Roboto Mono';
+        }
+    }
+}
+
+.contact-container {
+    padding: 60px 0 0 0;
+    margin: 0 0 5rem 0;
+
+    .section-title {
+        margin: 0;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        max-width: 70%;
+        width: 100%;
+        justify-content: flex-end;
+        margin: -40px 0 0 auto;
+    
+        &__item {
+            color: #FFF;
+            font-family: 'Josefin Sans';
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            letter-spacing: 1.44px;
+            text-decoration: underline;
+            margin: 0 0 1rem 0;
+            
+            &:first-of-type {
+                font-size: 48px;
+                font-weight: 400;
+                text-decoration: underline;
+                text-transform: lowercase;
+                margin: 0;
+            }
+
+            &:nth-of-type(2) {
+                font-size: 28px;
+                margin: 2rem 0 4rem;
+                text-decoration: none;
+            }
+        }
+    
+        &__separator {
+            color: #7C7C7C;
+            font-family: 'Roboto Mono';
+        }
+
+        
+    }
+}

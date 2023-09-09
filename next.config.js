@@ -70,6 +70,44 @@ const nextConfig = {
 				link: 'https://fm-fylo-dark-theme-landing-page-en2oc02vn-kiararose.vercel.app/',
 				col_class_name: 'card-hover col masonry-photo'
 			}
+		],
+		skills: [
+			{id: 1, list: 'html'},
+			{id: 2, list: 'css/scss'},
+			{id: 3, list: 'javascript'},
+			{id: 4, list: 'reactjs'},
+			{id: 5, list: 'nextjs'},
+			{id: 6, list: 'nodejs'},
+			{id: 7, list: 'bootstrap'},
+			{id: 8, list: 'tailwind'},
+			{id: 9, list: 'playwright'},
+			{id: 10, list: 'ui/ux'},
+			{id: 11, list: 'responsive-web-design'},
+			{id: 12, list: 'salesforce'},
+		],
+		contact: [
+			{
+				id: 1,
+				name: 'email',
+				list: '📧 kiararxsemarcelo@gmail.com'
+			},
+			{
+				id: 2,
+				name: 'number',
+				list: '📞 +639275066600'
+			},
+			{
+				id: 3,
+				name: 'linkedin',
+				list: 'Linkedin',
+				list_link: 'https://www.linkedin.com/in/kiara-rose-m-476362171/'
+			},
+			{
+				id: 4,
+				name: 'github',
+				list: 'Github',
+				list_link: 'https://github.com/kiararose'
+			}
 		]
   	},
 }
