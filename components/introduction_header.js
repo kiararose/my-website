@@ -1,5 +1,6 @@
 export default function IntroductionHeader(props) {
 	const description = props.description
+
     return (
         <div className="intro-header">
 			<div className="intro-header__description">
@@ -7,7 +8,6 @@ export default function IntroductionHeader(props) {
 					{description}
 				</p>
 			</div>
-            
         </div>
     )
 }

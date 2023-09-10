@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import CardHover from "../components/card_hover"
 
+
 export default function MasonryGallery() {
 	
     useEffect(() => {
@@ -15,12 +16,6 @@ export default function MasonryGallery() {
                 percentPosition: true,
                 fitWidth: true,
             });
-            // imagesLoaded(elem, function (instance) {
-            //     var msnry = new Masonry(elem, {
-            //         itemSelector: '.masonry-photos',
-            //         percentPosition: true
-            //     });
-            // });
         }
     }, [])
 

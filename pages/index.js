@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useInViewport } from 'react-in-viewport';
+
 
 import Matrix from "../components/matrix_raining_code"
 import NavMenu from "../components/nav_menu"
@@ -8,6 +8,7 @@ import Footer from "../components/footer"
 import IntroductionHeader from "../components/introduction_header";
 import MasonryGallery from "../components/masonry";
 import List from "../components/list";
+import LazyLoad from "../components/lazy_load";
 
 export default function Home() {
 
@@ -33,11 +34,7 @@ export default function Home() {
 	}
 
     useEffect(() => {
-	const welcomeTimer = setTimeout(() => setIsWelcome(true), 10000);
-
-	return () => {
-		clearTimeout(welcomeTimer);
-		};
+		window.scrollTo(0,0)
 	}, []);
   
 	return (
@@ -54,25 +51,37 @@ export default function Home() {
 					<Matrix />
 				} */}
 
-				<IntroductionHeader 
-					description="Kiara Marcelo — A front-end developer from the Philippines. With a keyboard as my paintbrush and code as my canvas, I transform imagination into reality, crafting digital experiences that leave users spellbound 🔮"
-				/>
+				<LazyLoad>
+					<IntroductionHeader 
+						description="Kiara Marcelo — A front-end developer from the Philippines. With a keyboard as my paintbrush and code as my canvas, I transform imagination into reality, crafting digital experiences that leave users spellbound 🔮"
+					/>
+				</LazyLoad>
 				
 				<div className="skills-container" ref={skillsRef}>
-					<SectionTitle title="Skills +"/>
-					<List list={process.env.skills}/>
+					<LazyLoad>
+						<SectionTitle title="Skills +"/>
+					</LazyLoad>
+					<LazyLoad>
+						<List list={process.env.skills}/>
+					</LazyLoad>
 				</div>
-
+			
 				<div className="works-container" ref={worksRef}>
-					<SectionTitle title="Works <>"/>
+					<LazyLoad>
+						<SectionTitle title="Works <>"/>
+					</LazyLoad>
 					<div className="cards-hover-container">
 						<MasonryGallery />
 					</div>
 				</div>
-
+				
 				<div className="contact-container" ref={contactRef}>
-					<SectionTitle title="Contact @"/>
-					<List list={process.env.contact}/>
+					<LazyLoad>
+						<SectionTitle title="Contact @"/>
+					</LazyLoad>
+					<LazyLoad>
+						<List list={process.env.contact}/>
+					</LazyLoad>
 				</div>
 
 				<Footer description="design & code by Kiara 🌷" />

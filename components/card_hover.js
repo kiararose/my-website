@@ -1,4 +1,5 @@
 import RotatingLink from "./rotating_link"
+import LazyLoad from "../components/lazy_load";
 
 export default function CardHover(props) {
 	const image = props.image || ''
@@ -12,16 +13,18 @@ export default function CardHover(props) {
 
     return (
         <div className={`card-hover ${col_class_name}`}>
-            <picture className="card-hover-image">
-                <source media="(max-width:500px)" srcset={image_mobile} />
-                <img src={image} alt={image_alt} className="img-fluid"/>
-            </picture>
-            <div className="card-hover-info">
-                <p className="card-hover-info__description">{description}</p>
-                <RotatingLink link={link} />
-                <span className="card-hover-info__tags">{tags}</span>
-                <span className="card-hover-info__year">{year}</span>
-            </div>
+            <LazyLoad>
+                <picture className="card-hover-image">
+                    <source media="(max-width:500px)" srcset={image_mobile} />
+                    <img src={image} alt={image_alt} className="img-fluid"/>
+                </picture>
+                <div className="card-hover-info">
+                    <p className="card-hover-info__description">{description}</p>
+                    <RotatingLink link={link} />
+                    <span className="card-hover-info__tags">{tags}</span>
+                    <span className="card-hover-info__year">{year}</span>
+                </div>
+            </LazyLoad>
         </div>
     )
 }

@@ -1,3 +1,18 @@
+
+// rotating_link component (works section)
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotateReverse {
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+// umbrella in nav
 @keyframes wiggle {
 
     0%,

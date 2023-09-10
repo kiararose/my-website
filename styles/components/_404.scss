@@ -1,0 +1,20 @@
+.page-404 {
+    h1, h2, p {
+        color: #fff;
+        font-family: "Roboto Mono";
+    }
+
+    a {
+        background-color: #000;
+        border: 1px solid #fff;
+        border-radius: 0;
+        text-transform: uppercase;
+
+        &:hover, &:active, &:focus {
+            background-color: #000 !important;
+            border-color: #fff !important;
+            opacity: .8;
+            color: #fff !important;
+        }
+    }
+}
