@@ -75,6 +75,7 @@ a {
 .section {
     opacity: 0;
     transition: 1s all ease-in;
+    width: 100%;
 
     &.loaded {
         opacity: 1;

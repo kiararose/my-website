@@ -1,21 +1,21 @@
 .intro-header {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     flex-direction: row;
-    padding: 0 4px;
+    padding: 0 4px 0 0;
     margin: 0 0 3rem 0;
-    // opacity: 0;
-    // transition: 1s all ease;
-    // transform: translateY(150px);
-
-    // &.loaded {
-    //     opacity: 1;
-    //     transform: translateY(0);
-    // }
 
     @media (min-width: 768px) {
         margin: 0 0 5rem 0;
+    }
+
+    &__image {
+        max-width: 20%;
+
+        @media (min-width: 1024px) {
+            max-width: 30%;
+        }
     }
 
     &__description {
