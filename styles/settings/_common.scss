@@ -40,6 +40,11 @@ button {
 a {
     text-decoration: none;
     cursor: pointer;
+    color: #fff;
+
+    &:hover {
+        opacity: .8;
+    }
 }
 
 ::selection {

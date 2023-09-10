@@ -77,7 +77,6 @@ const nextConfig = {
 			{id: 3, list: 'javascript'},
 			{id: 4, list: 'reactjs'},
 			{id: 5, list: 'nextjs'},
-			{id: 6, list: 'nodejs'},
 			{id: 7, list: 'bootstrap'},
 			{id: 8, list: 'tailwind'},
 			{id: 9, list: 'playwright'},
@@ -89,24 +88,29 @@ const nextConfig = {
 			{
 				id: 1,
 				name: 'email',
-				list: '📧 kiararxsemarcelo@gmail.com'
+				list: '📧 kiararxsemarcelo@gmail.com',
+				link: 'kiararxsemarcelo@gmail.com',
+				type: 'email'
 			},
 			{
 				id: 2,
 				name: 'number',
-				list: '📞 +639275066600'
+				list: '📞 +639275066600',
+				type: 'number'
 			},
 			{
 				id: 3,
 				name: 'linkedin',
 				list: 'Linkedin',
-				list_link: 'https://www.linkedin.com/in/kiara-rose-m-476362171/'
+				link: 'https://www.linkedin.com/in/kiara-rose-m-476362171/',
+				type: 'link'
 			},
 			{
 				id: 4,
 				name: 'github',
 				list: 'Github',
-				list_link: 'https://github.com/kiararose'
+				link: 'https://github.com/kiararose',
+				type: 'link'
 			}
 		]
   	},

@@ -78,6 +78,14 @@
                             transition: all .9s ease;
                         }
                     }
+
+                    &.animated {
+                        animation: wiggle 1.5s linear infinite alternate;
+
+                        &:hover {
+                            animation: none;
+                        }
+                    }
                 }
             }
         }

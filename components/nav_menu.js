@@ -15,7 +15,7 @@ export default function NavMenu(props) {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <a className="navbar-brand" href="#!" onCLick={home_scroll}>🌷K_</a>
+                        <a className="navbar-brand" href="#!" onClick={home_scroll}>🌷K_</a>
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
                             <li className="nav-item">
                                 <a className="nav-link" href="#!" onClick={skills_scroll} data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>Skills</a>
@@ -26,8 +26,11 @@ export default function NavMenu(props) {
                             <li className="nav-item">
                                 <a className="nav-link" href="#!" onClick={contact_scroll} data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>Contact</a>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#!" data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>☂️</a>
+                            <li className="nav-item animated">
+                                <button type="button" className="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Make it rain!">
+                                    ☂️
+                                </button>
+                                {/* <a className="nav-link" href="#!" data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}></a> */}
                             </li>
                         </ul>
                     </div>
