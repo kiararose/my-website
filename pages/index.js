@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 
-
 import Matrix from "../components/matrix_raining_code"
 import NavMenu from "../components/nav_menu"
 import SectionTitle from "../components/section_title"
@@ -10,12 +9,21 @@ import MasonryGallery from "../components/masonry";
 import List from "../components/list";
 import LazyLoad from "../components/lazy_load";
 
-export default function Home() {
+import * as contentful from "contentful"
+
+var client = contentful.createClient({
+	space: process.env.CONTENTFUL_SPACE_ID,
+	accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+})
+
+export default function Home({ skills, works, contact }) {
 
     const [isWelcome, setIsWelcome] = useState(false)
 	const worksRef = useRef(null)
 	const skillsRef = useRef(null)
 	const contactRef = useRef(null)
+
+	console.log(works, " WORKS")
 
 	const scrollToHome = () => {
 		scrollTo(0,0)
@@ -51,6 +59,8 @@ export default function Home() {
 					<Matrix />
 				} */}
 
+				{/* <Matrix /> */}
+
 				<LazyLoad>
 					<IntroductionHeader 
 						description="Kiara Marcelo — A front-end developer from the Philippines. With a keyboard as my paintbrush and code as my canvas, I transform imagination into reality, crafting digital experiences that leave users spellbound 🔮"
@@ -62,7 +72,7 @@ export default function Home() {
 						<SectionTitle title="Skills +"/>
 					</LazyLoad>
 					<LazyLoad>
-						<List list={process.env.skills}/>
+						<List list={skills}/>
 					</LazyLoad>
 				</div>
 			
@@ -71,7 +81,10 @@ export default function Home() {
 						<SectionTitle title="Works <>"/>
 					</LazyLoad>
 					<div className="cards-hover-container">
-						<MasonryGallery />
+						<MasonryGallery 
+							gallery={works}
+							col_class_name="card-hover col masonry-photo"
+						/>
 					</div>
 				</div>
 				
@@ -80,7 +93,7 @@ export default function Home() {
 						<SectionTitle title="Contact @"/>
 					</LazyLoad>
 					<LazyLoad>
-						<List list={process.env.contact}/>
+						<List list={contact}/>
 					</LazyLoad>
 				</div>
 
@@ -88,4 +101,27 @@ export default function Home() {
 			</div>
 		</div>
 	)
+}
+
+export async function getServerSideProps(context) {
+
+	const works = await client.getEntries({
+		content_type: 'projects'
+	})
+
+	const skills = await client.getEntries({
+		content_type: 'skills'
+	})
+
+	const contact = await client.getEntries({
+		content_type: 'contact'
+	})
+
+	return {
+		props: {
+			works: works.items,
+			skills: skills.items,
+			contact: contact.items
+		}
+	}
 }

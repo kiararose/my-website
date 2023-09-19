@@ -23,7 +23,7 @@ const nextConfig = {
 				image_alt: 'Article Preview Component',
 				tags: 'html, css, javascript',
 				year: '2021',
-				link: 'https://fm-fylo-dark-theme-landing-page-en2oc02vn-kiararose.vercel.app/',
+				link: 'https://fm-article-preview-component-git-main-kiararose.vercel.app/',
 				col_class_name: 'card-hover col masonry-photo'
 			},
 			{
@@ -34,7 +34,7 @@ const nextConfig = {
 				image_alt: 'Faq Accordion Card',
 				tags: 'html, css, javascript',
 				year: '2021',
-				link: 'https://fm-fylo-dark-theme-landing-page-en2oc02vn-kiararose.vercel.app/',
+				link: 'https://fm-faq-accordion-card-git-master-kiararose.vercel.app/',
 				col_class_name: 'card-hover col masonry-photo'
 			},
 			{
@@ -45,7 +45,7 @@ const nextConfig = {
 				image_alt: 'Signup Form',
 				tags: 'html, css, javascript',
 				year: '2021',
-				link: 'https://fm-fylo-dark-theme-landing-page-en2oc02vn-kiararose.vercel.app/',
+				link: 'https://fm-signup-form-git-master-kiararose.vercel.app/',
 				col_class_name: 'card-hover col masonry-photo'
 			},
 			{
@@ -56,7 +56,7 @@ const nextConfig = {
 				image_alt: 'Single Price Grid Component',
 				tags: 'html, css, javascript',
 				year: '2021',
-				link: 'https://fm-fylo-dark-theme-landing-page-en2oc02vn-kiararose.vercel.app/',
+				link: 'https://fm-single-price-grid-component-kiararose.vercel.app/',
 				col_class_name: 'card-hover col masonry-photo'
 			},
 			{
@@ -78,11 +78,10 @@ const nextConfig = {
 			{id: 4, list: 'reactjs'},
 			{id: 5, list: 'nextjs'},
 			{id: 7, list: 'bootstrap'},
-			{id: 8, list: 'tailwind'},
-			{id: 9, list: 'playwright'},
-			{id: 10, list: 'ui/ux'},
-			{id: 11, list: 'responsive-web-design'},
-			{id: 12, list: 'salesforce'},
+			{id: 8, list: 'playwright'},
+			{id: 9, list: 'ui/ux'},
+			{id: 10, list: 'responsive-web-design'},
+			{id: 11, list: 'salesforce'},
 		],
 		contact: [
 			{
@@ -90,27 +89,31 @@ const nextConfig = {
 				name: 'email',
 				list: '📧 kiararxsemarcelo@gmail.com',
 				link: 'kiararxsemarcelo@gmail.com',
-				type: 'email'
+				type: 'email',
+				target: false,
 			},
 			{
 				id: 2,
 				name: 'number',
 				list: '📞 +639275066600',
-				type: 'number'
+				type: 'number',
+				target: false,
 			},
 			{
 				id: 3,
 				name: 'linkedin',
 				list: 'Linkedin',
 				link: 'https://www.linkedin.com/in/kiara-rose-m-476362171/',
-				type: 'link'
+				type: 'link',
+				target: true,
 			},
 			{
 				id: 4,
 				name: 'github',
 				list: 'Github',
 				link: 'https://github.com/kiararose',
-				type: 'link'
+				type: 'link',
+				target: true
 			}
 		]
   	},

@@ -40,7 +40,7 @@
         background: #000000b0;
         padding: 0 24px;
 
-        &__description {
+        &__title {
             color: #dfdede;
             font-family: 'Roboto Mono';
             font-size: 24px;
@@ -67,10 +67,27 @@
             margin: 10px 0 10px auto;
         }
 
-        &__year {
+        &__tags {
+            span {
+                position: relative;
+                display: inline-block;
+
+                &::after {
+                    content: ',';
+                }
+
+                &:last-child {
+                    &::after {
+                        content: '';
+                    }
+                }
+            }
+        }
+
+        &__date {
             position: absolute;
-            top: 12px;
-            right: 12px;
+            top: 20px;
+            right: 3px;
             transform: rotate(-90deg);
             color: #ffffffb5;
             font-family: "Roboto Mono";
