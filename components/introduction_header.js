@@ -1,15 +1,19 @@
 export default function IntroductionHeader(props) {
-	const description = props.description
+	const intro = props.intro
+	const show_image = props.show_image 
 
     return (
         <div className="intro-header">
-			<div className="intro-header__image">
-				<img className="img-fluid" src="/images/monkey-peeking.png" alt="" />
-			</div>
+			{show_image &&
+				<div className="intro-header__image">
+					<img className="img-fluid" src="/images/monkey-peeking.png" alt="" />
+				</div>
+			}
+			
 			<div className="intro-header__description">
-				<p>
-					{description}
-				</p>
+				<h1>
+					{intro}
+				</h1>
 			</div>
         </div>
     )

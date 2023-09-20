@@ -74,7 +74,7 @@
     
         &__item {
             color: #FFF;
-            font-family: 'Josefin Sans';
+            font-family: 'Roboto Mono';
             font-size: 20px;
             font-style: normal;
             font-weight: 300;
@@ -93,6 +93,7 @@
                 text-decoration: underline;
                 text-transform: lowercase;
                 margin: 0;
+                font-family: 'Poppins';
 
                 @media (min-width: 375px) {
                     font-size: 24px;

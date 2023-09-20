@@ -1,0 +1,213 @@
+.theme-dark {
+    background: #000;
+
+    .header-container {
+        .navbar {
+            .navbar-toggler {
+                .navbar-toggler-icon {
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28250, 250, 250,1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+                }
+            }
+            
+            .navbar-collapse {
+    
+                &.show, &.collapsing {
+                    background: black;
+                }
+    
+                .navbar-brand {
+                    color: #fff;
+                }
+                
+                .navbar-nav {
+                    .nav-item {
+                        .nav-link {
+                            color: #fff !important;
+
+                            &:hover {
+                                &::before {
+                                    opacity: 1;
+                                    animation: blink-caret-nav-dark .5s step-end infinite;
+                                }
+                            }
+    
+                            &::before {
+                                background: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .intro-header {
+        border: none;
+        justify-content: flex-end;
+
+        &__description {
+            h1 {
+                color: #FFF;
+            }
+    
+            p {
+                color: #FFF;
+            }
+        }
+    
+        &__button {
+            button {
+                color: white;
+            }
+        }
+    }
+
+    .section-title {
+        h1 {
+            color: #8D8D8D;
+        }
+    }
+
+    .skills-container {
+        .list {
+            &__item {
+                a {
+                    color: #FFF;
+                }
+                
+                &::after {
+                    color: #7C7C7C;
+                }
+            }
+        
+            &__separator {
+                color: #7C7C7C;
+            }
+        }
+    }
+    
+    .contact-container {
+        .list {
+            &__item {
+                a {
+                    color: #FFF;
+                }
+            }
+        
+            &__separator {
+                color: #7C7C7C;
+                font-family: 'Roboto Mono';
+            }
+        }
+    }
+}
+
+.theme-light {
+    background: #fff;
+
+    .header-container {
+        .navbar {
+            .navbar-toggler {
+                .navbar-toggler-icon {
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0,1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+                }
+            }
+            
+            .navbar-collapse {
+    
+                &.show, &.collapsing {
+                    background: #fff;
+                }
+    
+                .navbar-brand {
+                    color: #000;
+                }
+                
+                .navbar-nav {
+                    .nav-item {
+                        .nav-link {
+                            color: #000 !important;
+
+                            &:hover {
+                                &::before {
+                                    opacity: 1;
+                                    animation: blink-caret-nav-light .5s step-end infinite;
+                                }
+                            }
+    
+                            &::before {
+                                background: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .intro-header {
+        border-bottom: 9px solid #000;
+
+        &__description {
+            h1 {
+                color: #000;
+            }
+    
+            p {
+                color: #000;
+            }
+        }
+    
+        &__button {
+            button {
+                color: #000;
+            }
+        }
+    }
+
+    .section-title {
+        h1 {
+            color: #8D8D8D;
+        }
+    }
+
+    .skills-container {
+        .list {
+            &__item {
+                color: #000;
+                font-weight: 400;
+
+                a {
+                    color: #000;
+                }
+    
+                &::after {
+                    color: #7C7C7C;
+                }
+            }
+        
+            &__separator {
+                color: #7C7C7C;
+            }
+        }
+    } 
+    
+    .contact-container {
+        .list {
+            &__item {
+                text-decoration-color: #000 !important;
+                color: #000;
+                font-weight: 400;
+
+                a {
+                    color: #000;
+                }
+            }
+        
+            &__separator {
+                color: #7C7C7C;
+                font-family: 'Roboto Mono';
+            }
+        }
+    }
+}

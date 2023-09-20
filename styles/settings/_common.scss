@@ -48,7 +48,7 @@ a {
 }
 
 ::selection {
-    background-color: #FF33E9;
+    background-color: #000;
     color: #fff;
 }
 
@@ -59,23 +59,24 @@ a {
   
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #000; 
+    background: #fff; 
 }
    
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #FF33E9; 
+    background: #000; 
 }
   
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #ff33eb63; 
+    background: #000; 
 }
 
 .section {
     opacity: 0;
     transition: 1s all ease-in;
     width: 100%;
+    position: relative;
 
     &.loaded {
         opacity: 1;

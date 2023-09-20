@@ -1,4 +1,6 @@
 import useMediaQuery from "../components/use_media_query"
+import { ThemeContext } from '../components/theme_context';
+import { useContext, useState } from 'react'
 
 export default function NavMenu(props) {
     const home_scroll = props.home_scroll
@@ -6,10 +8,32 @@ export default function NavMenu(props) {
     const skills_scroll = props.skills_scroll
     const contact_scroll = props.contact_scroll
     const is_mobile = useMediaQuery(768)
+
+    const dark_theme_icon = <>☂️</>
+    const light_theme_icon = <>🌞</>
+
+    const { theme, toggleTheme } = useContext(ThemeContext)
+    const [isChanged, setIsChanged] = useState(false)
+
+    const handleThemeToggle = () => {
+        toggleTheme()
+        setIsChanged(true)
+        // setIsChanged(!isChanged)
+        // if (isChanged == true) {
+        //     setIsChanged(false)
+        // }
+
+        setTimeout(() => {
+            setIsChanged(false)
+        }, 400)
+
+    }
+
+
     
     return (
         <header className="fixed-top header-container">
-            <nav className="navbar navbar-expand-lg navbar-light bg-black">
+            <nav className={`${theme === 'dark' ? 'bg-black' : 'bg-white'} navbar navbar-expand-lg navbar-light`}>
                 <div className="header-main-container">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -26,9 +50,21 @@ export default function NavMenu(props) {
                             <li className="nav-item">
                                 <a className="nav-link" href="#!" onClick={contact_scroll} data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>Contact</a>
                             </li>
-                            <li className="nav-item animated">
-                                <button type="button" className="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Make it rain!">
-                                    ☂️
+                            <li className={`${isChanged ? 'drop-entrance' : ''} nav-item`}>
+                                <button 
+                                    type="button" 
+                                    className="nav-link animated" 
+                                    data-bs-toggle="tooltip" 
+                                    data-bs-placement="bottom" 
+                                    title={theme === 'light' ? 'Here comes the sun!' : 'Let it rain!' }
+                                    onClick={handleThemeToggle}
+                                >
+                                    {
+                                        theme == 'dark' ?
+                                        light_theme_icon
+                                        :
+                                        dark_theme_icon
+                                    }
                                 </button>
                                 {/* <a className="nav-link" href="#!" data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}></a> */}
                             </li>

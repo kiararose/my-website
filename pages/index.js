@@ -8,6 +8,8 @@ import IntroductionHeader from "../components/introduction_header";
 import MasonryGallery from "../components/masonry";
 import List from "../components/list";
 import LazyLoad from "../components/lazy_load";
+import { ThemeContext } from '../components/theme_context';
+import { useContext } from 'react'
 
 import * as contentful from "contentful"
 
@@ -18,12 +20,11 @@ var client = contentful.createClient({
 
 export default function Home({ skills, works, contact }) {
 
-    const [isWelcome, setIsWelcome] = useState(false)
 	const worksRef = useRef(null)
 	const skillsRef = useRef(null)
 	const contactRef = useRef(null)
 
-	console.log(works, " WORKS")
+	const { theme, toggleTheme } = useContext(ThemeContext)
 
 	const scrollToHome = () => {
 		scrollTo(0,0)
@@ -55,15 +56,14 @@ export default function Home({ skills, works, contact }) {
 			/>
 
 			<div className="content-container">
-				{/* {isWelcome &&
+				{theme === 'dark' &&
 					<Matrix />
-				} */}
-
-				{/* <Matrix /> */}
+				}
 
 				<LazyLoad>
 					<IntroductionHeader 
-						description="Kiara Marcelo — A front-end developer from the Philippines. With a keyboard as my paintbrush and code as my canvas, I transform imagination into reality, crafting digital experiences that leave users spellbound 🔮"
+						intro="Kiara Marcelo — A front-end developer from the Philippines. With a keyboard as my paintbrush and code as my canvas, I transform imagination into reality, crafting digital experiences that leave users spellbound 🔮"
+						show_image={theme === 'light' ? true : false}
 					/>
 				</LazyLoad>
 				
