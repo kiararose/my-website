@@ -56,7 +56,7 @@ export default function NavMenu(props) {
                                     className="nav-link animated" 
                                     data-bs-toggle="tooltip" 
                                     data-bs-placement="bottom" 
-                                    title={theme === 'light' ? 'Here comes the sun!' : 'Let it rain!' }
+                                    title={theme === 'light' ? 'Let it rain!' : 'Here comes the sun!'}
                                     onClick={handleThemeToggle}
                                 >
                                     {
