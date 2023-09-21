@@ -8,14 +8,14 @@ export default function LazyLoad(props) {
 	let options = {
 		root: null,
 		rootMargin: "0px",
-		threshold: 1.0
+		threshold: .5
 	};
 
 	const {inViewport, enterCount}  = useInViewport(containerRef, options, { disconnectOnLeave: true }, props);
 
     return (
-        <section className={`${inViewport || enterCount > 0 ? 'loaded' : ''} section`} ref={containerRef}>
+        <div className={`${inViewport || enterCount > 0 ? 'loaded' : ''} lazyload`} ref={containerRef}>
             {props.children}
-        </section>
+        </div>
     )
 }

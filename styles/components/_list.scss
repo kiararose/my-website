@@ -43,17 +43,18 @@
                 color: #7C7C7C;
                 width: fit-content;
             }
-        }
-    
-        &__separator {
-            color: #7C7C7C;
-            font-family: 'Roboto Mono';
+
+            &:last-of-type {
+                &::after {
+                    display: none;
+                }
+            }
         }
     }
 }
 
 .contact-container {
-   
+
     .section-title {
         @media (min-width: 768px) {
             margin: 0;
@@ -89,7 +90,7 @@
             
             &:first-of-type {
                 font-size: 22px;
-                font-weight: 400;
+                font-weight: 600;
                 text-decoration: underline;
                 text-transform: lowercase;
                 margin: 0;

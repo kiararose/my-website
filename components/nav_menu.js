@@ -9,7 +9,7 @@ export default function NavMenu(props) {
     const contact_scroll = props.contact_scroll
     const is_mobile = useMediaQuery(768)
 
-    const dark_theme_icon = <>☂️</>
+    const dark_theme_icon = <>🌜</>
     const light_theme_icon = <>🌞</>
 
     const { theme, toggleTheme } = useContext(ThemeContext)
@@ -56,7 +56,8 @@ export default function NavMenu(props) {
                                     className="nav-link animated" 
                                     data-bs-toggle="tooltip" 
                                     data-bs-placement="bottom" 
-                                    title={theme === 'light' ? 'Let it rain!' : 'Here comes the sun!'}
+                                    // title={theme === 'light' ? 'Let it rain!' : 'Here comes the sun!'}
+                                    title={theme === 'light' ? 'Good Night :)' : 'Good Morning :)'}
                                     onClick={handleThemeToggle}
                                 >
                                     {

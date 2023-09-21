@@ -26,7 +26,7 @@ export default function MasonryGallery(props) {
     }, [])
 
     return (
-        <div className="masonry-photos row row-cols-2">
+        <div className="masonry-photos row row-cols-1 row-cols-md-1 row-cols-lg-2">
            
             {ordered_gallery.map((work) => {
                 const images =  work.fields.image.map((i) => {
@@ -40,7 +40,7 @@ export default function MasonryGallery(props) {
                             key={work.fields.id}
                             title={work.fields.title}
                             image={images[0]}
-                            image_mobile={images[1]}
+                            image_mobile={images[0]}
                             image_alt={work.fields.title}
                             tags={work.fields.tags}
                             date={year}

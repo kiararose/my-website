@@ -42,25 +42,35 @@
     }
 
     .intro-header {
-        border: none;
-        justify-content: flex-end;
-
-        &__description {
+        border-color:#fff;
+    
+        @media (min-width: 768px) {
+            margin: 0 0 5rem 0;
+        }
+    
+        &__intro {
             h1 {
-                color: #FFF;
-            }
-    
-            p {
-                color: #FFF;
+                color: #fff;
             }
         }
     
-        &__button {
-            button {
-                color: white;
+        &__details {
+            .intro-details__cta {
+                a {
+                    color: #fff;
+                    
+                    .link__svg {
+                        fill: #fff;
+                        stroke: #fff;
+                    }
+                }
+            }
+    
+            .intro-details__description {
+                color: #fff;
             }
         }
-    }
+    } 
 
     .section-title {
         h1 {
@@ -85,6 +95,23 @@
             }
         }
     }
+
+    .card-hover {
+        &-info {
+            &__date {
+                color: #b3b3b3;
+            }
+
+            &__title {
+                color: #fff;
+                font-weight: 400;
+            }
+    
+            &__tags {
+                color: #939393;
+            }
+        }
+    }    
     
     .contact-container {
         .list {
@@ -146,24 +173,35 @@
     }
 
     .intro-header {
-        border-bottom: 9px solid #000;
-
-        &__description {
+        border-color:#000;
+    
+        @media (min-width: 768px) {
+            margin: 0 0 5rem 0;
+        }
+    
+        &__intro {
             h1 {
                 color: #000;
             }
+        }
     
-            p {
+        &__details {
+            .intro-details__cta {
+                a {
+                    color: #000;
+                    
+                    .link__svg {
+                        fill: #000;
+                        stroke: #000;
+                    }
+                }
+            }
+    
+            .intro-details__description {
                 color: #000;
             }
         }
-    
-        &__button {
-            button {
-                color: #000;
-            }
-        }
-    }
+    } 
 
     .section-title {
         h1 {
@@ -191,6 +229,24 @@
             }
         }
     } 
+
+    .card-hover {
+        
+        &-info {
+            &__date {
+                color: #1d1d1d;
+            }
+
+            &__title {
+                color: #000;
+                font-weight: 500;
+            }
+    
+            &__tags {
+                color: #292929;
+            }
+        }
+    }   
     
     .contact-container {
         .list {

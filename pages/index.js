@@ -7,7 +7,6 @@ import Footer from "../components/footer"
 import IntroductionHeader from "../components/introduction_header";
 import MasonryGallery from "../components/masonry";
 import List from "../components/list";
-import LazyLoad from "../components/lazy_load";
 import { ThemeContext } from '../components/theme_context';
 import { useContext } from 'react'
 
@@ -56,30 +55,27 @@ export default function Home({ skills, works, contact }) {
 			/>
 
 			<div className="content-container">
-				{theme === 'dark' &&
+				{/* {theme === 'dark' &&
 					<Matrix />
-				}
+				} */}
 
-				<LazyLoad>
-					<IntroductionHeader 
-						intro="Kiara Marcelo — A front-end developer from the Philippines. With a keyboard as my paintbrush and code as my canvas, I transform imagination into reality, crafting digital experiences that leave users spellbound 🔮"
-						show_image={theme === 'light' ? true : false}
-					/>
-				</LazyLoad>
+				<IntroductionHeader 
+					intro="Kiara Marcelo — A frontend web developer from the Philippines. With a keyboard as my paintbrush and code as my canvas, I transform imagination into reality, crafting digital experiences that leave users spellbound 🔮"
+					details={true}
+					description="Over the course of almost 3 years in the IT industry, I have gained experience in website development, utilized cloud platforms like Salesforce, and conducted app testing"
+					// show_image={theme === 'light' ? true : false}
+					show_image={true}
+					cta="Explore"
+					skills_scroll={scrollToSkills}
+				/>
 				
 				<div className="skills-container" ref={skillsRef}>
-					<LazyLoad>
-						<SectionTitle title="Skills +"/>
-					</LazyLoad>
-					<LazyLoad>
-						<List list={skills}/>
-					</LazyLoad>
+					<SectionTitle title="Skills +"/>
+					<List list={skills}/>
 				</div>
 			
 				<div className="works-container" ref={worksRef}>
-					<LazyLoad>
-						<SectionTitle title="Works <>"/>
-					</LazyLoad>
+					<SectionTitle title="Works <>"/>
 					<div className="cards-hover-container">
 						<MasonryGallery 
 							gallery={works}
@@ -89,12 +85,8 @@ export default function Home({ skills, works, contact }) {
 				</div>
 				
 				<div className="contact-container" ref={contactRef}>
-					<LazyLoad>
-						<SectionTitle title="Contact @"/>
-					</LazyLoad>
-					<LazyLoad>
-						<List list={contact}/>
-					</LazyLoad>
+					<SectionTitle title="Contact @"/>
+					<List list={contact}/>
 				</div>
 
 				<Footer description="design & code by Kiara 🌷" />

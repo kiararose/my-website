@@ -5,67 +5,197 @@
     justify-content: space-between;
     height: fit-content;
     position: relative;
-    padding: 0px 4px;
-    margin: 0 0 8px 0;
+    // padding: 0px 4px;
+    padding: 0 1rem 4rem 1rem;
+    // margin: 0 0 4rem 0;
 
-    &:hover {
-        .card-hover-info {
-            opacity: 1;
-        }
-    }
+    // &:hover {
+    //     .card-hover-image-link {
+    //         opacity: 1;
+    //     }
+    // }
 
     &-image {
+        position: relative;
         width: 100%;
         height: 100%;
+        display: block;
 
         img {
-            border-radius: 3px;
+            // border-radius: 3px;
             width: 100%;
+        }
+
+        &:hover {
+            .card-hover-image-link {
+                opacity: 1;
+            }
+        }
+
+        &-link { 
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: .5s all ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: #000000b0;
+            padding: 0 24px;
+            // border-radius: 3px;
+    
+            // &__button {
+            //     font-family: 'Roboto Mono';
+            //     margin: 0 auto;
+            // }
         }
     }
 
+    // &-info {
+    //     position: absolute;
+    //     content: '';
+    //     top: 0;
+    //     left: 0;
+    //     opacity: 0;
+    //     transition: .5s all ease;
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: flex-start;
+    //     justify-content: space-between;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: #000000b0;
+    //     padding: 0 24px;
+    //     border-radius: 3px;
+
+    //     &__title {
+    //         color: #dfdede;
+    //         font-family: 'Roboto Mono';
+    //         font-size: 24px;
+    //         font-style: normal;
+    //         font-weight: 400;
+    //         line-height: normal;
+    //         margin: 10px 0;
+    //         text-transform: uppercase;
+    //         letter-spacing: 2px;
+    //     }
+
+    //     &__button {
+    //         font-family: 'Roboto Mono';
+    //         margin: 0 auto;
+    //     }
+
+    //     &__tags, &__year {
+    //         color: #ffffffb5;
+    //         font-family: "Roboto Mono";
+    //         font-size: 10px;
+    //         font-style: normal;
+    //         font-weight: 400;
+    //         line-height: normal;
+    //         margin: 10px 0 10px auto;
+    //     }
+
+    //     &__tags {
+    //         span {
+    //             position: relative;
+    //             display: inline-block;
+
+    //             &::after {
+    //                 content: ',';
+    //             }
+
+    //             &:last-child {
+    //                 &::after {
+    //                     content: '';
+    //                 }
+    //             }
+    //         }
+    //     }
+
+    //     &__date {
+    //         position: absolute;
+    //         top: 20px;
+    //         right: 3px;
+    //         transform: rotate(-90deg);
+    //         color: #ffffffb5;
+    //         font-family: "Roboto Mono";
+    //         font-size: 16px;
+    //         font-style: normal;
+    //         font-weight: 400;
+    //         line-height: normal;
+    //     }
+    // }
+
+   
+
     &-info {
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: .5s all ease;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;
-        background: #000000b0;
-        padding: 0 24px;
-        border-radius: 3px;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0 4rem 0;
 
-        &__title {
-            color: #dfdede;
-            font-family: 'Roboto Mono';
-            font-size: 24px;
+        &__date {
+            // position: absolute;
+            // top: 20px;
+            // right: 3px;
+            // transform: rotate(-90deg);
+            color: #1d1d1d;
+            font-family: "Roboto Mono";
+            font-size: 12px;
             font-style: normal;
             font-weight: 400;
+            line-height: normal;
+
+            @media (min-width: 768px) {
+                font-size: 12px;
+            }
+
+            @media (min-width: 1024px) {
+                font-size: 14px;
+            }
+
+            @media (min-width: 1440px) {
+                font-size: 16px;
+            }
+        }
+
+        &__title {
+            color: #000;
+            font-family: 'Roboto Mono';
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
             line-height: normal;
             margin: 10px 0;
             text-transform: uppercase;
             letter-spacing: 2px;
+
+            @media (min-width: 768px) {
+                font-size: 18px;
+            }
+
+            @media (min-width: 1024px) {
+                font-size: 20px;
+            }
+
+            @media (min-width: 1440px) {
+                font-size: 24px;
+            }
         }
 
-        &__button {
-            font-family: 'Roboto Mono';
-            margin: 0 auto;
-        }
-
-        &__tags, &__year {
-            color: #ffffffb5;
+        &__tags {
+            color: #292929;
             font-family: "Roboto Mono";
-            font-size: 10px;
+            font-size: 12px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-            margin: 10px 0 10px auto;
+            // margin: 10px 0 10px auto;
         }
 
         &__tags {
@@ -83,19 +213,6 @@
                     }
                 }
             }
-        }
-
-        &__date {
-            position: absolute;
-            top: 20px;
-            right: 3px;
-            transform: rotate(-90deg);
-            color: #ffffffb5;
-            font-family: "Roboto Mono";
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
         }
     }
 }

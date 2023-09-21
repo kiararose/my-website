@@ -17,8 +17,11 @@ export default function CardHover(props) {
                 <picture className="card-hover-image">
                     <source media="(max-width:500px)" srcSet={image_mobile} />
                     <img src={image} alt={image_alt} className="img-fluid"/>
+                    <div className="card-hover-image-link">
+                        <RotatingLink link={link} />
+                    </div>
                 </picture>
-                <div className="card-hover-info">
+                {/* <div className="card-hover-info">
                     <p className="card-hover-info__title">{title}</p>
                     <RotatingLink link={link} />
                     <div className="card-hover-info__tags">
@@ -29,6 +32,18 @@ export default function CardHover(props) {
                         })}
                     </div>
                     <span className="card-hover-info__date">{date}</span>
+                </div> */}
+                
+                <div className="card-hover-info">
+                    <span className="card-hover-info__date">{date}</span>
+                    <p className="card-hover-info__title">{title}</p>
+                    <div className="card-hover-info__tags">
+                        {tags.map((t, index) => {
+                            return (
+                                <span key={index}>{t}</span>
+                            )
+                        })}
+                    </div>
                 </div>
             </LazyLoad>
         </div>

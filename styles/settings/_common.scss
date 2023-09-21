@@ -72,11 +72,11 @@ a {
     background: #000; 
 }
 
-.section {
+.lazyload {
     opacity: 0;
     transition: 1s all ease-in;
     width: 100%;
-    position: relative;
+    // position: relative;
 
     &.loaded {
         opacity: 1;
