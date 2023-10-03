@@ -12,11 +12,11 @@ export default function RotatingLink(props) {
 				{is_deployed === true && title !== "My Portfolio" ?
 					<path className="link__arrow" d="M 75 100 L 125 100 L 110 85 M 125 100 L 110 115"  fill="none" />
 				:
-					<g class="link__face">
+					<g className="link__face">
 						<path d='M 95 102 Q 100 107 105 102' fill="none" />
-						<ellipse class='' cx='90' cy='100' rx='2' ry='2' stroke="none" />
-						<ellipse class='' cx='110' cy='100' rx='2' ry='2' stroke="none" />
-						<ellipse class='' cx='100' cy='100' rx='35' ry='35' fill="none" />
+						<ellipse className='' cx='90' cy='100' rx='2' ry='2' stroke="none" />
+						<ellipse className='' cx='110' cy='100' rx='2' ry='2' stroke="none" />
+						<ellipse className='' cx='100' cy='100' rx='35' ry='35' fill="none" />
 					</g>
 				}
 

@@ -19,14 +19,14 @@ export default function List(props) {
 	const {inViewport, enterCount}  = useInViewport(listRef, options, { disconnectOnLeave: true }, props);
 
     const ordered_list = _.sortBy(list, 'fields.id')
-    
+
     return (
         <LazyLoad>
             <ul className={`${inViewport ? 'loaded' : ''} list`} ref={listRef}>
                 {ordered_list.map((item) => {
                     if(item.fields.type == "link" || item.fields.type == "email") {
                         return(
-                            <li className="list__item" key={item.id}>
+                            <li className="list__item" key={item.fields.id}>
                                 <a href={item.fields.type == 'link' ? item.fields.link : (item.fields.type == 'email' ? `mailto:${item.fields.link}` : '')} target={item.fields.outsideLink ? '_blank' : ''} rel={item.fields.outsideLink ? 'noopener noreferrer' : ''}>
                                 {item.fields.title}
                                 </a>
