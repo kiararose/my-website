@@ -76,7 +76,7 @@
         &__item {
             color: #FFF;
             font-family: 'Roboto Mono';
-            font-size: 20px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 300;
             line-height: normal;
@@ -89,7 +89,7 @@
             }
             
             &:first-of-type {
-                font-size: 22px;
+                font-size: 16px;
                 font-weight: 600;
                 text-decoration: underline;
                 text-transform: lowercase;
@@ -97,7 +97,11 @@
                 font-family: 'Poppins';
 
                 @media (min-width: 375px) {
-                    font-size: 24px;
+                    font-size: 18px;
+                }
+
+                @media (min-width: 430px) {
+                    font-size: 22px;
                 }
 
                 @media (min-width: 768px) {

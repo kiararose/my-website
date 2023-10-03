@@ -10,6 +10,7 @@ export default function CardHover(props) {
     const tags = props.tags || ''
     const date = props.date || ''
     const link = props.link || '!#'
+    const is_deployed = props.is_deployed || false
 
     return (
         <div className={`card-hover ${col_class_name}`}>
@@ -18,7 +19,11 @@ export default function CardHover(props) {
                     <source media="(max-width:500px)" srcSet={image_mobile} />
                     <img src={image} alt={image_alt} className="img-fluid"/>
                     <div className="card-hover-image-link">
-                        <RotatingLink link={link} />
+                        <RotatingLink 
+                            link={link} 
+                            is_deployed={is_deployed}
+                            title={title}
+                        />
                     </div>
                 </picture>
                 {/* <div className="card-hover-info">

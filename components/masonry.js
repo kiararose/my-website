@@ -33,7 +33,13 @@ export default function MasonryGallery(props) {
                     return `https:${i.fields.file.url}`
                 })
 
-                const year = moment(work.fields.date, 'YYYY-MM-DD').format('YYYY')
+                let year
+
+                if(work.fields.deployed === true) {
+                    year = moment(work.fields.date, 'YYYY-MM-DD').format('YYYY')
+                } else {
+                    year = "Coming Soon"
+                }
 
                     return (
                         <CardHover 
@@ -46,6 +52,7 @@ export default function MasonryGallery(props) {
                             date={year}
                             link={work.fields.link}
                             col_class_name={col_class_name}
+                            is_deployed={work.fields.deployed}
                         />
                     )
                 })

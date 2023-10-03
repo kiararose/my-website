@@ -7,7 +7,7 @@ export default function NavMenu(props) {
     const works_scroll = props.works_scroll
     const skills_scroll = props.skills_scroll
     const contact_scroll = props.contact_scroll
-    const is_mobile = useMediaQuery(768)
+    const is_mobile = useMediaQuery(991)
 
     const dark_theme_icon = <>🌜</>
     const light_theme_icon = <>🌞</>
@@ -18,19 +18,12 @@ export default function NavMenu(props) {
     const handleThemeToggle = () => {
         toggleTheme()
         setIsChanged(true)
-        // setIsChanged(!isChanged)
-        // if (isChanged == true) {
-        //     setIsChanged(false)
-        // }
 
         setTimeout(() => {
             setIsChanged(false)
         }, 400)
-
     }
 
-
-    
     return (
         <header className="fixed-top header-container">
             <nav className={`${theme === 'dark' ? 'bg-black' : 'bg-white'} navbar navbar-expand-lg navbar-light`}>
@@ -38,8 +31,13 @@ export default function NavMenu(props) {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    {is_mobile &&
                         <a className="navbar-brand" href="#!" onClick={home_scroll}>🌷K_</a>
+                    }
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        {!is_mobile &&
+                            <a className="navbar-brand" href="#!" onClick={home_scroll}>🌷K_</a>
+                        }
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
                             <li className="nav-item">
                                 <a className="nav-link" href="#!" onClick={skills_scroll} data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>Skills</a>
@@ -54,8 +52,10 @@ export default function NavMenu(props) {
                                 <button 
                                     type="button" 
                                     className="nav-link animated" 
-                                    data-bs-toggle="tooltip" 
+                                    // data-bs-toggle="tooltip" 
                                     data-bs-placement="bottom" 
+                                    data-bs-toggle={`${is_mobile ? 'collapse' : 'tooltip'}`} 
+                                    data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}
                                     // title={theme === 'light' ? 'Let it rain!' : 'Here comes the sun!'}
                                     title={theme === 'light' ? 'Good Night :)' : 'Good Morning :)'}
                                     onClick={handleThemeToggle}

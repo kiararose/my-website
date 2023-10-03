@@ -54,4 +54,9 @@ $accentColor: #fff;
 			animation-play-state: paused;
 		}
 	}
+
+	&.disabled {
+		cursor: default;
+		pointer-events: none;
+	}
 }
