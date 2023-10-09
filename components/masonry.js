@@ -53,6 +53,7 @@ export default function MasonryGallery(props) {
                             link={work.fields.link}
                             col_class_name={col_class_name}
                             is_deployed={work.fields.deployed}
+                            use_placeholder={true}
                         />
                     )
                 })

@@ -7,48 +7,92 @@
 }
 
 .skills-container {
-
+    
     .list {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: flex-start;
+        flex-wrap: unset;
+        justify-content: unset;
         margin: 2rem 0 0 0;
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        position: relative;
 
         @media (min-width: 768px) {
             margin: 5rem 0 0 0;
         }
+        
+        &::before, &::after {
+            background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+            content: "";
+            height: 100%;
+            position: absolute;
+            width: 50px;
+            z-index: 2;
+        }
+    
+        &::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
+    
+        &::before {
+            left: 0;
+            top: 0;
+        }
 
-        &__item {
-            color: #FFF;
-            font-family: 'Roboto Mono';
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            letter-spacing: 1.44px;
-            text-transform: lowercase;
-
-            @media (min-width: 768px) {
-                font-size: 32px;
-            }
-
-            @media (min-width: 1440px) {
-                font-size: 44px;
-            }
-
-            &::after {
-                content: '_';
-                color: #7C7C7C;
-                width: fit-content;
-            }
-
-            &:last-of-type {
-                &::after {
-                    display: none;
+        &:hover {
+            .list__item {
+                a {
+                    animation-play-state: paused;
                 }
             }
+        }
+        
+        &__item {
+            // color: #FFF;
+            // font-family: 'Roboto Mono';
+            // font-size: 24px;
+            // font-style: normal;
+            // font-weight: 300;
+            // line-height: normal;
+            // letter-spacing: 1.44px;
+            // text-transform: lowercase;
+
+            // @media (min-width: 768px) {
+            //     font-size: 32px;
+            // }
+
+            // @media (min-width: 1440px) {
+            //     font-size: 44px;
+            // }
+            // margin: 0 3rem;
+
+            a {
+                width: 150px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                animation: slideMobile 20s linear infinite;
+
+                @media (min-width: 768px) {
+                    width: 200px;
+                    animation: slide 20s linear infinite;
+                }
+            }
+
+            // &::after {
+            //     content: '_';
+            //     color: #7C7C7C;
+            //     width: fit-content;
+            // }
+
+            // &:last-of-type {
+            //     &::after {
+            //         display: none;
+            //     }
+            // }
         }
     }
 }

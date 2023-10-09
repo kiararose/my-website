@@ -23,8 +23,6 @@ export default function Home({ skills, works, contact }) {
 	const skillsRef = useRef(null)
 	const contactRef = useRef(null)
 
-	const { theme, toggleTheme } = useContext(ThemeContext)
-
 	const scrollToHome = () => {
 		scrollTo(0,0)
 	}
@@ -62,8 +60,7 @@ export default function Home({ skills, works, contact }) {
 				<IntroductionHeader 
 					intro="Kiara Marcelo — A frontend web developer from the Philippines. With a keyboard as my paintbrush and code as my canvas, I transform imagination into reality, crafting digital experiences that leave users spellbound 🔮"
 					details={true}
-					description="Over the course of almost 3 years in the IT industry, I have gained experience in website development, utilized cloud platforms like Salesforce, and conducted app testing"
-					// show_image={theme === 'light' ? true : false}
+					description="Over the course of almost 3 years in the IT industry, I have gained experience in frontend web development, utilized cloud platforms like Salesforce, and conducted app testing. I am now dedicated to frontend web development and am eager to enhance and learn new technologies as I continue on this journey."
 					show_image={true}
 					cta="Explore"
 					skills_scroll={scrollToSkills}
@@ -71,7 +68,10 @@ export default function Home({ skills, works, contact }) {
 				
 				<div className="skills-container" ref={skillsRef}>
 					<SectionTitle title="Skills +"/>
-					<List list={skills}/>
+					<List 
+						list={skills} 
+						content="skills"
+					/>
 				</div>
 			
 				<div className="works-container" ref={worksRef}>
@@ -95,7 +95,7 @@ export default function Home({ skills, works, contact }) {
 	)
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
 
 	const works = await client.getEntries({
 		content_type: 'projects'

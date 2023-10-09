@@ -80,6 +80,16 @@
 
     .skills-container {
         .list {
+
+            &::before, &::after {
+                background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(255,255,255,0) 100%);
+                content: "";
+                height: 100%;
+                position: absolute;
+                width: 50px;
+                z-index: 2;
+            }
+
             &__item {
                 a {
                     color: #FFF;
@@ -127,6 +137,29 @@
             }
         }
     }
+
+    .page-404 {
+        h1, h2, p {
+            color: #fff;
+            font-family: "Roboto Mono";
+        }
+    
+        a {
+            background-color: #fff;
+            border: 1px solid #fff;
+            border-radius: 0;
+            text-transform: uppercase;
+            color: #000;
+    
+            &:hover, &:active, &:focus {
+                background-color: #000 !important;
+                border-color: #fff !important;
+                opacity: .8;
+                color: #fff !important;
+            }
+        }
+    }
+        
 }
 
 .theme-light {
@@ -211,6 +244,16 @@
 
     .skills-container {
         .list {
+
+            &::before, &::after {
+                background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+                content: "";
+                height: 100%;
+                position: absolute;
+                width: 50px;
+                z-index: 2;
+            }
+
             &__item {
                 color: #000;
                 font-weight: 400;
@@ -263,6 +306,28 @@
             &__separator {
                 color: #7C7C7C;
                 font-family: 'Roboto Mono';
+            }
+        }
+    }
+
+    .page-404 {
+        h1, h2, p {
+            color: #000;
+            font-family: "Roboto Mono";
+        }
+    
+        a {
+            background-color: #000;
+            border: 1px solid #fff;
+            border-radius: 0;
+            text-transform: uppercase;
+            color: #fff;
+    
+            &:hover, &:active, &:focus {
+                background-color: #fff !important;
+                border-color: #000 !important;
+                opacity: .8;
+                color: #000 !important;
             }
         }
     }

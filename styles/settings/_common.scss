@@ -68,13 +68,3 @@ a {
     background: #000; 
 }
 
-.lazyload {
-    opacity: 0;
-    transition: 1s all ease-in;
-    width: 100%;
-    // position: relative;
-
-    &.loaded {
-        opacity: 1;
-    }
-}
