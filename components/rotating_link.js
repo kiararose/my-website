@@ -25,7 +25,7 @@ export default function RotatingLink(props) {
 						{
 							title !== "My Portfolio" ?
 								( is_deployed ? 
-								'click and view this link' 
+								'click me click me click me' 
 								: 
 								'coming soon ♡ coming soon'
 								)

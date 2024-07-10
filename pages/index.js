@@ -58,24 +58,27 @@ export default function Home({ skills, works, contact }) {
 				} */}
 
 				<IntroductionHeader 
-					intro="Kiara Marcelo — A frontend web developer from the Philippines. With a keyboard as my paintbrush and code as my canvas, I transform imagination into reality, crafting digital experiences that leave users spellbound 🔮"
+					intro={true}
+					role="Frontend web developer,"
+					location="from the Philippines"
 					details={true}
-					description="Over the course of almost 3 years in the IT industry, I have gained experience in frontend web development, utilized cloud platforms like Salesforce, and conducted app testing. I am now dedicated to frontend web development and am eager to enhance and learn new technologies as I continue on this journey."
-					show_image={true}
-					cta="Explore"
+					description="Elevating businesses through expertise in creating responsive and user-friendly websites, embracing challenges, and delivering impeccable results. "
+					// description="Over the course of almost 3 years in the IT industry, I have gained experience in frontend web development, utilized cloud platforms like Salesforce, and conducted app testing. I am now dedicated to frontend web development and am eager to enhance and learn new technologies as I continue on this journey."
+					// show_image={true}
+					// cta="Explore"
 					skills_scroll={scrollToSkills}
 				/>
 				
-				<div className="skills-container" ref={skillsRef}>
-					<SectionTitle title="Skills +"/>
+				{/* <div className="skills-container" ref={skillsRef}>
+					<SectionTitle title="skills."/>
 					<List 
 						list={skills} 
 						content="skills"
 					/>
-				</div>
+				</div> */}
 			
 				<div className="works-container" ref={worksRef}>
-					<SectionTitle title="Works <>"/>
+					<SectionTitle title="works."/>
 					<div className="cards-hover-container">
 						<MasonryGallery 
 							gallery={works}
@@ -85,7 +88,7 @@ export default function Home({ skills, works, contact }) {
 				</div>
 				
 				<div className="contact-container" ref={contactRef}>
-					<SectionTitle title="Contact @"/>
+					<SectionTitle title="contact."/>
 					<List list={contact}/>
 				</div>
 

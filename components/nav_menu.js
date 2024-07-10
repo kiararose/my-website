@@ -25,19 +25,19 @@ export default function NavMenu(props) {
     }
 
     return (
-        <header className="fixed-top header-container">
-            <nav className={`${theme === 'dark' ? 'bg-black' : 'bg-white'} navbar navbar-expand-lg navbar-light`}>
+        <header className="fixed-top header-container mt-3">
+            <nav className={`navbar navbar-expand-lg navbar-light`}>
                 <div className="header-main-container">
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     {is_mobile &&
                         <a className="navbar-brand" href="#!" onClick={home_scroll}>🌷K_</a>
-                    }
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        {!is_mobile &&
+                    } */}
+                    {/* <div className="collapse navbar-collapse" id="navbarSupportedContent"> */}
+                        {/* {!is_mobile &&
                             <a className="navbar-brand" href="#!" onClick={home_scroll}>🌷K_</a>
-                        }
+                        } */}
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
                             <li className="nav-item">
                                 <a className="nav-link" href="#!" onClick={skills_scroll} data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}>Skills</a>
@@ -70,7 +70,7 @@ export default function NavMenu(props) {
                                 {/* <a className="nav-link" href="#!" data-bs-toggle={`${is_mobile ? 'collapse' : ''}`} data-bs-target={`${is_mobile ? '.navbar-collapse' : ''}`}></a> */}
                             </li>
                         </ul>
-                    </div>
+                    {/* </div> */}
                 </div>
             </nav>
         </header>

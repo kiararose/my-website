@@ -15,11 +15,18 @@
     //     }
     // }
 
+    .lazyload {
+        display: flex;
+    }
+
     &-image {
         position: relative;
-        width: 100%;
+        // width: 100%;
+        width: 60%;
         height: auto;
         display: block;
+        // border-radius: 17px;
+        overflow: hidden;
 
         @media (min-width: 768px) {
             height: 100%;
@@ -48,7 +55,7 @@
             justify-content: center;
             width: 100%;
             height: 100%;
-            background: #000000b0;
+            // background: #000000b0;
             padding: 0 24px;
             // border-radius: 3px;
     
@@ -139,9 +146,12 @@
     &-info {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        // align-items: center;
+        // justify-content: center;
         margin: 1rem 0 2rem 0;
+        width: 40%;
+        padding: 2rem 5rem 0;
+        z-index: 1;
 
         @media (min-width: 1024px) {
             margin: 1rem 0 4rem 0;
@@ -152,66 +162,36 @@
             // top: 20px;
             // right: 3px;
             // transform: rotate(-90deg);
-            color: #1d1d1d;
-            font-family: "Roboto Mono";
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 400;
+            // color: #1d1d1d;
+            font-family: 'Helvetica Neue Light';
             line-height: normal;
-
-            @media (min-width: 768px) {
-                font-size: 12px;
-            }
-
-            @media (min-width: 1024px) {
-                font-size: 14px;
-            }
-
-            @media (min-width: 1440px) {
-                font-size: 16px;
-            }
+            font-size: clamp(.8rem, 5vw, 1rem);
         }
 
         &__title {
-            color: #000;
-            font-family: 'Roboto Mono';
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
+            // color: #000;
+            font-family: 'Helvetica Neue Bold';
+            font-size: clamp(2rem, 5vw, 5rem);
             line-height: normal;
             margin: 10px 0;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            text-align: center;
-
-            @media (min-width: 768px) {
-                font-size: 18px;
-            }
-
-            @media (min-width: 1024px) {
-                font-size: 20px;
-            }
-
-            @media (min-width: 1440px) {
-                font-size: 24px;
-            }
+            // letter-spacing: 2px;
+            // text-align: center;
         }
 
         &__tags {
-            color: #292929;
-            font-family: "Roboto Mono";
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 400;
+            // color: #292929;
+            font-family: 'Helvetica Neue Light';
+            font-size: clamp(1rem, 5vw, 1.5rem);
             line-height: normal;
-            text-align: center;
+            // text-align: center;
 
             span {
                 position: relative;
                 display: inline-block;
 
                 &::after {
-                    content: ',';
+                    content: '/';
                 }
 
                 &:last-child {

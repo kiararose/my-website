@@ -2,6 +2,8 @@ import LazyLoad from "../components/lazy_load";
 
 export default function IntroductionHeader(props) {
 	const intro = props.intro
+	const role = props.role
+	const location = props.location
 	const details = props.details
 	const description = props.description
 	const show_image = props.show_image 
@@ -19,7 +21,8 @@ export default function IntroductionHeader(props) {
 
 				{intro ?
 					<div className="intro-header__intro">
-						<h1>{intro}</h1>
+						<h1>{role}</h1>
+						<h1>{location}</h1>
 					</div>
 					:
 					<></>
@@ -39,9 +42,9 @@ export default function IntroductionHeader(props) {
 						}
 						
 						{description &&
-							<p className="intro-details__description">		
+							<div className="intro-details__description">		
 								{description}
-							</p>
+							</div>
 						}
 					</div>
 					:

@@ -163,7 +163,12 @@
 }
 
 .theme-light {
-    background: #fff;
+    background: #e3b3c3;
+
+    ::selection {
+        background-color: #c54835;
+        color: #e3b3c3;
+    }
 
     .header-container {
         .navbar {
@@ -172,41 +177,45 @@
                     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0,1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
                 }
             }
-            
-            .navbar-collapse {
-    
-                &.show, &.collapsing {
-                    background: #fff;
-                }
-    
-                .navbar-brand {
-                    color: #000;
-                }
-                
-                .navbar-nav {
-                    .nav-item {
-                        .nav-link {
-                            color: #000 !important;
 
-                            &:hover {
-                                &::before {
-                                    opacity: 1;
-                                    animation: blink-caret-nav-light .5s step-end infinite;
-                                }
-                            }
-    
+            .navbar-nav {
+                border-color: #c54835;
+
+                .nav-item {
+                    .nav-link {
+                        color: #c54835 !important;
+
+                        &:hover {
                             &::before {
-                                background: #000;
+                                opacity: 1;
+                                animation: blink-caret-nav-light .5s step-end infinite;
                             }
+                        }
+
+                        &::before {
+                            background: #c54835;
                         }
                     }
                 }
+            }
+            
+            .navbar-collapse {
+    
+                // &.show, &.collapsing {
+                //     background: #fff;
+                // }
+    
+                // .navbar-brand {
+                //     color: #000;
+                // }
+                
+                
             }
         }
     }
 
     .intro-header {
-        border-color:#000;
+        // border-color:#000;
     
         @media (min-width: 768px) {
             margin: 0 0 5rem 0;
@@ -214,31 +223,33 @@
     
         &__intro {
             h1 {
-                color: #000;
+                color: #c54835;
             }
         }
     
         &__details {
-            .intro-details__cta {
-                a {
-                    color: #000;
+            // .intro-details__cta {
+            //     a {
+            //         color: #000;
                     
-                    .link__svg {
-                        fill: #000;
-                        stroke: #000;
-                    }
-                }
-            }
+            //         .link__svg {
+            //             fill: #000;
+            //             stroke: #000;
+            //         }
+            //     }
+            // }
     
             .intro-details__description {
-                color: #000;
+                color: #c54835;
             }
         }
     } 
 
     .section-title {
         h1 {
-            color: #8D8D8D;
+            // color: #8D8D8D;
+            // color: #c54835;
+            -webkit-text-stroke: 2px #c54835;
         }
     }
 
@@ -255,11 +266,11 @@
             }
 
             &__item {
-                color: #000;
+                color: #c54835;
                 font-weight: 400;
 
                 a {
-                    color: #000;
+                    color: #c54835;
                 }
     
                 &::after {
@@ -277,29 +288,44 @@
         
         &-info {
             &__date {
-                color: #1d1d1d;
+                color: #c54835;
             }
 
             &__title {
-                color: #000;
-                font-weight: 500;
+                color: #c54835;
+                // font-weight: 500;
             }
     
             &__tags {
-                color: #292929;
+                color: #c54835;
             }
         }
+
+        &-image {
+            &-link {
+                background: rgba(197, 72, 53, 1);
+
+                .link {
+                    &__svg {
+                        fill: #e3b3c3;
+                        stroke: #e3b3c3;
+                    }
+                }
+            }
+        }
+
+        
     }   
     
     .contact-container {
         .list {
             &__item {
-                text-decoration-color: #000 !important;
-                color: #000;
-                font-weight: 400;
+                text-decoration-color: #c54835 !important;
+                color: #c54835;
+                // font-weight: 400;
 
                 a {
-                    color: #000;
+                    color: #c54835;
                 }
             }
         
@@ -312,7 +338,7 @@
 
     .page-404 {
         h1, h2, p {
-            color: #000;
+            color: #c54835;
             font-family: "Roboto Mono";
         }
     
@@ -329,6 +355,12 @@
                 opacity: .8;
                 color: #000 !important;
             }
+        }
+    }
+
+    footer {
+        h6 {
+            color: #c54835;
         }
     }
 }

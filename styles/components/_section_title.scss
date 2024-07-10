@@ -1,19 +1,21 @@
 .section-title {
-    margin: 0 0 3rem 0;
+    // margin: 0 0 3rem 0;
 
-    @media (min-width: 768px) {
-        margin: 0 0 5rem 0;
-    }
+    // @media (min-width: 768px) {
+    //     margin: 0 0 5rem 0;
+    // }
     
     h1 {
-        color: #8D8D8D;
-        font-family: 'Roboto Mono';
-        font-size: 20px;
-        font-style: normal;
+        // color: #8D8D8D;
+        color: transparent;
+        // font-family: 'Roboto Mono';
+        font-family: "Poppins";
+        font-family: 'Helvetica Neue Medium';
+        font-size: clamp(1.5rem, 5vw, 3.5rem);
         font-weight: 400;
-        line-height: normal;
-        text-transform: uppercase;
-        letter-spacing: 5px;
+        // text-transform: uppercase;
+        // letter-spacing: 3px;
         padding: 0 4px;
+        text-align: center;
     }
 }

@@ -6,6 +6,7 @@ export default function LazyLoad(props) {
 	const containerRef = useRef(null)
 	const use_placeholder = props.use_placeholder || false
 	const placeholder = props.custom_placeholder || 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAQSURBVHgBAQUA+v8AAAAAAAAFAAFkeJU4AAAAAElFTkSuQmCC'
+	const custom_class = props.custom_class || ''
 
 	let options = {
 		root: null,
@@ -16,7 +17,7 @@ export default function LazyLoad(props) {
 	const {inViewport, enterCount}  = useInViewport(containerRef, options, { disconnectOnLeave: true }, props);
 
     return (
-        <div className={`${inViewport || enterCount > 0 ? 'loaded' : ''} lazyload`} ref={containerRef}>
+        <div className={`${inViewport || enterCount > 0 ? 'loaded' : ''} lazyload ${custom_class ? custom_class : ''}`} ref={containerRef}>
 
 			{use_placeholder &&
 				<img src={placeholder} width="100%" className='lazy-placeholder' alt='Placeholder'/>

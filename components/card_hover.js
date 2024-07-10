@@ -12,10 +12,11 @@ export default function CardHover(props) {
     const link = props.link || '!#'
     const is_deployed = props.is_deployed || false
     const use_placeholder = props.use_placeholder || false
+    const custom_class = props.custom_class || ''
 
     return (
         <div className={`card-hover ${col_class_name}`}>
-            <LazyLoad use_placeholder={use_placeholder}>
+            <LazyLoad use_placeholder={use_placeholder} custom_class={custom_class}>
                 <picture className="card-hover-image">
                     <source media="(max-width:500px)" srcSet={image_mobile} />
                     <img src={image} alt={image_alt} className="img-fluid"/>

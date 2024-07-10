@@ -36,7 +36,6 @@ export default function List(props) {
                                     : 
                                     item.fields.title
                                 }
-
                                 </a>
                             </li>
                         )
@@ -62,11 +61,7 @@ export default function List(props) {
                     }
                 })}
                 </>
-                }
-                
-            
-                
-                
+            }
             </ul>
         </LazyLoad>
     )

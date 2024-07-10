@@ -4,18 +4,18 @@ $hoverDuration: 0.3s;
 $easeIn: cubic-bezier(0.32, 0, 0.67, 0);
 $easeOut: cubic-bezier(0.33, 1, 0.68, 1);
 
-$textColor: #fff;
-$bgColor: #fff;
-$accentColor: #fff;
+// $textColor: #fff;
+// $bgColor: #fff;
+// $accentColor: #fff;
 
 .link {
 	width: 8rem;
 	height: 8rem;
 	display: inline-block;
-	font: 300 1.3rem/1.4 "Roboto Mono"; 
+	font: 300 1.3rem/1.4 "Helvetica Neue Medium"; 
 	text-transform: uppercase;
 	letter-spacing: 0.1175em;
-	word-spacing: 0.3em;
+	word-spacing: 0.2em;
 	text-decoration: none;
     margin: 0 auto;
 
@@ -43,9 +43,9 @@ $accentColor: #fff;
 		width: 100%;
 		height: auto;
 		transform-box: fill-box;
-		fill: $textColor;
-		stroke: $textColor;
-		stroke-width: 0.05em;
+		// fill: $textColor;
+		// stroke: $textColor;
+		stroke-width: 0.09em;
 		stroke-linecap: round;
 		stroke-linejoin: round;
 	}

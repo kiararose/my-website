@@ -47,7 +47,7 @@ a {
     background-color: #000;
     color: #fff;
 }
-
+ 
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
@@ -55,16 +55,16 @@ a {
   
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #fff; 
+    background: #e3b3c3; 
 }
    
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #000; 
+    background: #c54835; 
 }
   
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #000; 
+    background: #c54835cc; 
 }
 

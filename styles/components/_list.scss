@@ -110,23 +110,21 @@
         flex-direction: column;
         width: 100%;
         justify-content: flex-end;
-        margin: 2rem 0 0 0;
+        margin: 0 auto;
 
         @media (min-width: 768px) {
-            margin: -40px 0 0 auto;
+            
             max-width: 70%;
         }
     
         &__item {
             color: #FFF;
-            font-family: 'Roboto Mono';
+            font-family: 'Helvetica Neue Medium';
             font-size: 16px;
-            font-style: normal;
-            font-weight: 300;
             line-height: normal;
-            letter-spacing: 1.44px;
             text-decoration: underline;
             margin: 0 0 1rem 0;
+            text-align: center;
 
             @media (min-width: 768px) {
                 font-size: 24px;
@@ -134,11 +132,9 @@
             
             &:first-of-type {
                 font-size: 16px;
-                font-weight: 600;
                 text-decoration: underline;
                 text-transform: lowercase;
                 margin: 0;
-                font-family: 'Poppins';
 
                 @media (min-width: 375px) {
                     font-size: 18px;
@@ -172,11 +168,9 @@
             }
         }
     
-        &__separator {
-            color: #7C7C7C;
-            font-family: 'Roboto Mono';
-        }
-
-        
+        // &__separator {
+        //     color: #7C7C7C;
+        //     font-family: 'Roboto Mono';
+        // }
     }
 }
